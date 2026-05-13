@@ -1,0 +1,237 @@
+# logickocli / vocab / fallacies
+#
+# Catalog of formal and informal fallacies.
+# Two formal fallacies (affirming the consequent, denying the antecedent) come
+# from the source vocabulary (20230617T120300, 김명석 두뇌보완계획100 계열).
+# The rest are standard items from analytic-philosophy textbooks (Hurley,
+# Bergmann, 이병덕 등) added so the tool can flag common reasoning errors in
+# Korean conversation.
+
+version: "1.0"
+
+entries:
+
+# =============================================================================
+# Formal fallacies
+# =============================================================================
+
+  - id: FALLACY.AFFIRMING_CONSEQUENT
+    kind: formal
+    canonical_ko: 후건긍정의 오류
+    en: [affirming the consequent]
+    schema:
+      - "A → B"
+      - "B"
+      - "∴ A   (invalid)"
+    explanation_ko: "조건문의 후건이 참이라고 해서 전건이 참인 것은 아니다."
+    native_aliases: ["잘못된 뒤로 이면 없애기"]
+
+  - id: FALLACY.DENYING_ANTECEDENT
+    kind: formal
+    canonical_ko: 전건부정의 오류
+    en: [denying the antecedent]
+    schema:
+      - "A → B"
+      - "¬A"
+      - "∴ ¬B   (invalid)"
+    explanation_ko: "조건문의 전건이 거짓이라고 해서 후건이 거짓인 것은 아니다."
+    native_aliases: ["잘못된 이면 없애기"]
+
+  - id: FALLACY.UNDISTRIBUTED_MIDDLE
+    kind: formal
+    canonical_ko: 매개념 부주연의 오류
+    en: [undistributed middle]
+    schema:
+      - "All A are B"
+      - "All C are B"
+      - "∴ All C are A   (invalid)"
+    explanation_ko: "정언 삼단논법에서 매개념이 적어도 한 번은 주연되어야 한다."
+
+# =============================================================================
+# Informal fallacies — relevance
+# =============================================================================
+
+  - id: FALLACY.AD_HOMINEM
+    kind: informal
+    subtype: relevance
+    canonical_ko: 인신공격
+    en: [ad hominem, personal attack]
+    explanation_ko: "주장 자체가 아니라 주장하는 사람의 성격·동기·배경을 공격하는 오류."
+
+  - id: FALLACY.STRAW_MAN
+    kind: informal
+    subtype: relevance
+    canonical_ko:
+      - 허수아비 논증
+      - 허수아비 오류
+    en: [straw man]
+    explanation_ko: "상대의 주장을 약하게 왜곡한 뒤 그 왜곡된 형태를 반박하는 오류."
+
+  - id: FALLACY.APPEAL_TO_AUTHORITY
+    kind: informal
+    subtype: relevance
+    canonical_ko:
+      - 권위에 호소
+      - 부적절한 권위에 호소
+    en: [appeal to authority, argumentum ad verecundiam]
+    explanation_ko: "관련 분야의 권위자가 아니거나 학계 합의가 없는 경우에 권위만으로 주장의 참을 정당화하는 오류."
+
+  - id: FALLACY.APPEAL_TO_EMOTION
+    kind: informal
+    subtype: relevance
+    canonical_ko: 감정에 호소
+    en: [appeal to emotion, argumentum ad passiones]
+    explanation_ko: "논증 대신 청자의 감정(공포, 동정, 분노 등)을 자극해 결론을 받아들이게 하는 오류."
+
+  - id: FALLACY.APPEAL_TO_IGNORANCE
+    kind: informal
+    subtype: relevance
+    canonical_ko:
+      - 무지에 호소
+      - 무지논증
+    en: [appeal to ignorance, argumentum ad ignorantiam]
+    explanation_ko: "거짓이 증명되지 않았으므로 참이라거나, 참이 증명되지 않았으므로 거짓이라고 결론짓는 오류."
+
+  - id: FALLACY.APPEAL_TO_POPULARITY
+    kind: informal
+    subtype: relevance
+    canonical_ko:
+      - 대중에 호소
+      - 군중심리에 호소
+    en: [appeal to popularity, argumentum ad populum, bandwagon]
+    explanation_ko: "다수가 믿는다는 사실만으로 주장의 참을 정당화하는 오류."
+
+  - id: FALLACY.RED_HERRING
+    kind: informal
+    subtype: relevance
+    canonical_ko:
+      - 논점 일탈
+      - 훈제 청어
+    en: [red herring]
+    explanation_ko: "원래 쟁점과 무관한 사안으로 주의를 돌려 논점을 흐리는 오류."
+
+# =============================================================================
+# Informal fallacies — induction / generalization
+# =============================================================================
+
+  - id: FALLACY.HASTY_GENERALIZATION
+    kind: informal
+    subtype: induction
+    canonical_ko:
+      - 성급한 일반화
+      - 표본 부족의 오류
+    en: [hasty generalization, insufficient sample]
+    explanation_ko: "표본이 너무 적거나 편향되어 있어 일반화가 정당화되지 않는데도 일반 결론을 내리는 오류."
+
+  - id: FALLACY.BIASED_SAMPLE
+    kind: informal
+    subtype: induction
+    canonical_ko: 편향된 표본
+    en: [biased sample, unrepresentative sample]
+    explanation_ko: "표본이 모집단을 대표하지 못해 결론이 왜곡되는 오류."
+
+  - id: FALLACY.FALSE_ANALOGY
+    kind: informal
+    subtype: induction
+    canonical_ko:
+      - 잘못된 유비
+      - 부적절한 유비
+    en: [false analogy, weak analogy]
+    explanation_ko: "유비 대상 사이의 관련 유사성이 약하거나 결정적 차이를 무시하는 오류."
+
+# =============================================================================
+# Informal fallacies — causation
+# =============================================================================
+
+  - id: FALLACY.POST_HOC
+    kind: informal
+    subtype: causation
+    canonical_ko:
+      - 사후 인과의 오류
+      - 시간 순서 오류
+    en: ["post hoc ergo propter hoc", "false cause"]
+    explanation_ko: "A 뒤에 B가 일어났다는 사실만으로 A가 B의 원인이라고 결론짓는 오류."
+
+  - id: FALLACY.CORRELATION_CAUSATION
+    kind: informal
+    subtype: causation
+    canonical_ko: 상관관계와 인과관계의 혼동
+    en: [correlation vs causation, cum hoc ergo propter hoc]
+    explanation_ko: "두 변수가 함께 변한다는 상관관계만으로 한쪽이 다른 쪽의 원인이라고 결론짓는 오류."
+
+  - id: FALLACY.SLIPPERY_SLOPE
+    kind: informal
+    subtype: causation
+    canonical_ko: 미끄러운 비탈길
+    en: [slippery slope]
+    explanation_ko: "충분한 근거 없이 어떤 작은 사건이 연쇄 인과를 거쳐 극단적 결과로 이어진다고 주장하는 오류."
+
+# =============================================================================
+# Informal fallacies — structure / presupposition
+# =============================================================================
+
+  - id: FALLACY.BEGGING_THE_QUESTION
+    kind: informal
+    subtype: presupposition
+    canonical_ko:
+      - 결론 선취의 오류
+      - 선결 문제 요구의 오류
+      - 순환 논증
+    en: [begging the question, petitio principii, circular reasoning]
+    explanation_ko: "증명하려는 결론을 전제에 이미 가정하고 들어가는 오류."
+
+  - id: FALLACY.COMPLEX_QUESTION
+    kind: informal
+    subtype: presupposition
+    canonical_ko:
+      - 복합 질문의 오류
+      - 다중 질문의 오류
+    en: [complex question, loaded question]
+    explanation_ko: "검증되지 않은 전제를 깔고 단일 질문으로 묶어 답을 강요하는 오류."
+
+  - id: FALLACY.FALSE_DICHOTOMY
+    kind: informal
+    subtype: presupposition
+    canonical_ko:
+      - 거짓 양도논법
+      - 잘못된 이분법
+      - 흑백논리
+    en: [false dichotomy, false dilemma, black-and-white thinking]
+    explanation_ko: "실제로는 둘 이상의 선택지가 있는데 두 가지만 있다고 전제하는 오류."
+
+  - id: FALLACY.EQUIVOCATION
+    kind: informal
+    subtype: language
+    canonical_ko: 애매어의 오류
+    en: [equivocation]
+    explanation_ko: "한 표현이 논증 안에서 두 가지 다른 뜻으로 쓰여 결론이 잘못 도출되는 오류."
+
+  - id: FALLACY.AMPHIBOLY
+    kind: informal
+    subtype: language
+    canonical_ko: 모호한 문장의 오류
+    en: [amphiboly]
+    explanation_ko: "문장 구조가 두 가지 이상으로 해석될 수 있는데 한쪽 해석을 임의로 채택해 결론을 도출하는 오류."
+
+  - id: FALLACY.COMPOSITION
+    kind: informal
+    subtype: language
+    canonical_ko:
+      - 합성의 오류
+      - 결합의 오류
+    en: [composition fallacy]
+    explanation_ko: "부분의 속성이 전체에도 그대로 적용된다고 잘못 추론하는 오류."
+
+  - id: FALLACY.DIVISION
+    kind: informal
+    subtype: language
+    canonical_ko: 분할의 오류
+    en: [division fallacy]
+    explanation_ko: "전체의 속성이 각 부분에도 그대로 적용된다고 잘못 추론하는 오류."
+
+  - id: FALLACY.GENERAL
+    kind: informal
+    subtype: meta
+    canonical_ko: 오류
+    en: [fallacy]
+    native_aliases: ["잘못 이끌기"]

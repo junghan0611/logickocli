@@ -1,0 +1,1095 @@
+# logickocli / vocab / core
+#
+# Canonical Korean logic vocabulary, normalized from Denote note 20230617T120300.
+# Canonical = standard Korean academic term (한자말).
+#
+# `native_aliases` field holds native-Korean (한말) terms — primarily from
+# 김명석 『두뇌보완계획100』, which deliberately reconstructs logic vocabulary
+# in pure-Korean form. We keep those mappings to preserve search compatibility
+# with older garden notes and to recognize user input written in that style.
+# Responses use canonical_ko + symbol because those are best-attested in LLM
+# pretraining distributions, which keeps human↔agent communication stable.
+# That is a tool-choice, not a judgment about the vocabulary itself.
+#
+# ID scheme:
+#   PROP.*    propositional logic (concepts, rules)
+#   PRED.*    predicate / quantifier logic
+#   META.*    metalogical concepts (validity, soundness, etc.)
+#   SEM.*     sentences, terms, syntactic categories
+#   RULE.*    derived inference/replacement rules
+#   FALLACY.* — see vocab/fallacies.yaml
+
+version: "1.0"
+source:
+  denote_id: "20230617T120300"
+  source_rows: 141
+
+entries:
+
+# =============================================================================
+# Propositional logic — connectives
+# =============================================================================
+
+  - id: PROP.NEGATION
+    domain: propositional_logic
+    kind: connective
+    canonical_ko: 부정
+    en: [negation]
+    symbol: ["¬", "~"]
+    aliases_ko: []
+    native_aliases: ["거짓이다", "거짓이다글월"]
+
+  - id: PROP.CONJUNCTION
+    domain: propositional_logic
+    kind: connective
+    canonical_ko: 연언
+    en: [conjunction]
+    symbol: ["∧", "&"]
+    aliases_ko: []
+    native_aliases: ["이고", "이고글월"]
+
+  - id: PROP.DISJUNCTION
+    domain: propositional_logic
+    kind: connective
+    canonical_ko: 선언
+    en: [disjunction, inclusive disjunction]
+    symbol: ["∨"]
+    aliases_ko: [포괄 선언]
+    native_aliases: ["이거나", "이거나글월", "넓은 이거나"]
+
+  - id: PROP.EXCLUSIVE_DISJUNCTION
+    domain: propositional_logic
+    kind: connective
+    canonical_ko: 배타 선언
+    en: [exclusive disjunction]
+    symbol: ["⊕"]
+    aliases_ko: []
+    native_aliases: ["좁은 이거나"]
+
+  - id: PROP.CONDITIONAL
+    domain: propositional_logic
+    kind: connective
+    canonical_ko: 조건문
+    en: [conditional, material conditional]
+    symbol: ["→", "⊃"]
+    aliases_ko: [단순조건문]
+    native_aliases: ["이면", "이면글월", "그냥 이면글월"]
+    parts:
+      antecedent:
+        canonical_ko: 전건
+        en: antecedent
+        native_aliases: ["이면 앞말"]
+      consequent:
+        canonical_ko: 후건
+        en: consequent
+
+  - id: PROP.BICONDITIONAL
+    domain: propositional_logic
+    kind: connective
+    canonical_ko: 쌍조건
+    en: [biconditional]
+    symbol: ["↔", "≡"]
+    aliases_ko: []
+    native_aliases: ["짝이면", "짝이면글월", "일 때 오직 그때만"]
+    note: "if and only if / 인 경우 오직 그 경우에만"
+
+  - id: PROP.DOUBLE_NEGATION
+    domain: propositional_logic
+    kind: concept
+    canonical_ko: 이중부정
+    en: [double negation]
+    symbol: ["¬¬A"]
+    native_aliases: ["두 번 거짓이다"]
+
+# =============================================================================
+# Propositional logic — natural deduction inference rules
+# =============================================================================
+
+  - id: PROP.CONJ_INTRO
+    domain: propositional_logic
+    kind: inference_rule
+    canonical_ko:
+      - 연언 도입
+      - 연언논법
+    en: [conjunction introduction, and introduction, conjunction rule]
+    symbol: ["∧I"]
+    schema:
+      - "A, B ⊢ A ∧ B"
+    native_aliases: ["이고 넣기"]
+
+  - id: PROP.CONJ_ELIM
+    domain: propositional_logic
+    kind: inference_rule
+    canonical_ko:
+      - 연언 제거
+      - 단순화논법
+    en: [conjunction elimination, and elimination, simplification]
+    symbol: ["∧E"]
+    schema:
+      - "A ∧ B ⊢ A"
+      - "A ∧ B ⊢ B"
+    native_aliases: ["이고 없애기"]
+
+  - id: PROP.DISJ_INTRO
+    domain: propositional_logic
+    kind: inference_rule
+    canonical_ko:
+      - 선언 도입
+      - 첨가논법
+    en: [disjunction introduction, addition]
+    symbol: ["∨I"]
+    schema:
+      - "A ⊢ A ∨ B"
+    native_aliases: ["이거나 넣기"]
+
+  - id: PROP.DISJ_ELIM
+    domain: propositional_logic
+    kind: inference_rule
+    canonical_ko:
+      - 선언 제거
+      - 선언 삼단논법
+    en: [disjunction elimination, disjunctive syllogism, case analysis]
+    symbol: ["∨E"]
+    schema:
+      - "A ∨ B, ¬A ⊢ B"
+      - "A ∨ B, A → C, B → C ⊢ C"
+    native_aliases: ["이거나 없애기"]
+
+  - id: PROP.ARGUMENT_BY_CASES
+    domain: propositional_logic
+    kind: inference_rule
+    canonical_ko:
+      - 경우에 의한 증명
+      - 양도논법
+    en: [argument by cases, proof by cases, constructive dilemma]
+    symbol: []
+    native_aliases: ["이러나저러나"]
+
+  - id: PROP.IMP_INTRO
+    domain: propositional_logic
+    kind: inference_rule
+    canonical_ko:
+      - 조건문 도입
+      - 조건증명법
+    en: [conditional proof, implication introduction, conditional introduction]
+    symbol: ["→I"]
+    schema:
+      - "[A] ⋯ B ⊢ A → B"
+    native_aliases: ["이면 넣기"]
+
+  - id: PROP.MODUS_PONENS
+    domain: propositional_logic
+    kind: inference_rule
+    canonical_ko:
+      - 전건긍정
+      - 긍정논법
+      - 조건문 제거
+    en: [modus ponens, implication elimination]
+    symbol: ["MP", "→E"]
+    schema:
+      - "A, A → B ⊢ B"
+    native_aliases: ["이면 없애기"]
+
+  - id: PROP.MODUS_TOLLENS
+    domain: propositional_logic
+    kind: inference_rule
+    canonical_ko:
+      - 후건부정
+      - 부정논법
+    en: [modus tollens, denying the consequent]
+    symbol: ["MT"]
+    schema:
+      - "A → B, ¬B ⊢ ¬A"
+    native_aliases: ["뒤로 이면 없애기"]
+
+  - id: PROP.HYPOTHETICAL_SYLLOGISM
+    domain: propositional_logic
+    kind: inference_rule
+    canonical_ko:
+      - 가언 삼단논법
+      - 연쇄논법
+    en: [hypothetical syllogism, chain rule]
+    symbol: ["HS"]
+    schema:
+      - "A → B, B → C ⊢ A → C"
+    native_aliases: ["이면 잇기"]
+
+  - id: PROP.RAA
+    domain: propositional_logic
+    kind: inference_rule
+    canonical_ko:
+      - 귀류법
+      - 간접증명
+      - 배리법
+    en: [reductio ad absurdum, indirect proof, proof by contradiction]
+    symbol: ["RAA", "¬I"]
+    schema:
+      - "[¬A] ⋯ ⊥ ⊢ A"
+    native_aliases: ["거짓이다 넣기"]
+
+  - id: PROP.DN_ELIM
+    domain: propositional_logic
+    kind: inference_rule
+    canonical_ko: 이중부정 제거
+    en: [double negation elimination]
+    symbol: ["DNE", "¬¬E"]
+    schema:
+      - "¬¬A ⊢ A"
+    native_aliases: ["거짓이다 없애기"]
+
+# =============================================================================
+# Propositional logic — replacement / equivalence rules
+# =============================================================================
+
+  - id: RULE.REPLACEMENT
+    domain: propositional_logic
+    kind: meta_rule
+    canonical_ko: 치환규칙
+    en: [replacement rule]
+    native_aliases: ["달리 쓰기 굴레"]
+
+  - id: RULE.EQUIVALENCE
+    domain: propositional_logic
+    kind: meta_rule
+    canonical_ko: 동치규칙
+    en: [equivalence rule]
+    native_aliases: ["같은 말 굴레"]
+
+  - id: RULE.DEMORGAN_CONJ
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko: 연언 드 모르간 규칙
+    en: ["De Morgan's rule of conjunction"]
+    schema:
+      - "¬(A ∧ B) ≡ ¬A ∨ ¬B"
+    native_aliases: ["이고 모아 거짓이다"]
+
+  - id: RULE.DEMORGAN_DISJ
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko: 선언 드 모르간 규칙
+    en: ["De Morgan's rule of disjunction"]
+    schema:
+      - "¬(A ∨ B) ≡ ¬A ∧ ¬B"
+    native_aliases: ["이거나 모아 거짓이다"]
+
+  - id: RULE.COMM_CONJ
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko: 연언 교환규칙
+    en: [commutativity of conjunction]
+    schema:
+      - "A ∧ B ≡ B ∧ A"
+    native_aliases: ["이고 앞뒤 바꿈"]
+
+  - id: RULE.COMM_DISJ
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko: 선언 교환규칙
+    en: [commutativity of disjunction]
+    schema:
+      - "A ∨ B ≡ B ∨ A"
+    native_aliases: ["이거나 앞뒤 바꿈"]
+
+  - id: RULE.ASSOC_CONJ
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko: 연언 결합규칙
+    en: [associativity of conjunction]
+    schema:
+      - "(A ∧ B) ∧ C ≡ A ∧ (B ∧ C)"
+    native_aliases: ["이고 새로 모음"]
+
+  - id: RULE.ASSOC_DISJ
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko: 선언 결합규칙
+    en: [associativity of disjunction]
+    schema:
+      - "(A ∨ B) ∨ C ≡ A ∨ (B ∨ C)"
+    native_aliases: ["이거나 새로 모음"]
+
+  - id: RULE.DIST_CONJ
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko: 연언 배분규칙
+    en: [distributivity of conjunction]
+    schema:
+      - "A ∧ (B ∨ C) ≡ (A ∧ B) ∨ (A ∧ C)"
+    native_aliases: ["이고 나눔"]
+
+  - id: RULE.DIST_DISJ
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko: 선언 배분규칙
+    en: [distributivity of disjunction]
+    schema:
+      - "A ∨ (B ∧ C) ≡ (A ∨ B) ∧ (A ∨ C)"
+    native_aliases: ["이거나 나눔"]
+
+  - id: RULE.TRANSPOSITION
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko:
+      - 대우규칙
+      - 대우
+    en: [transposition, contraposition]
+    schema:
+      - "A → B ≡ ¬B → ¬A"
+    native_aliases: ["이면 앞뒤 바꿈"]
+
+  - id: RULE.EXPORTATION
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko: 추출규칙
+    en: [exportation]
+    schema:
+      - "(A ∧ B) → C ≡ A → (B → C)"
+    native_aliases: ["이렇고 저렇다면"]
+
+  - id: RULE.CONDITIONAL_EXCHANGE
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko: 조건규칙
+    en: [conditional exchange, material implication]
+    schema:
+      - "A → B ≡ ¬A ∨ B"
+    native_aliases: ["이면 이거나 바꿈"]
+
+  - id: RULE.CONJ_TAUT
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko: 연언 동어반복
+    en: [conjunctive tautology, conjunction idempotence]
+    schema:
+      - "A ∧ A ≡ A"
+    native_aliases: ["이고 되풀이"]
+
+  - id: RULE.DISJ_TAUT
+    domain: propositional_logic
+    kind: replacement_rule
+    canonical_ko: 선언 동어반복
+    en: [disjunctive tautology, disjunction idempotence]
+    schema:
+      - "A ∨ A ≡ A"
+    native_aliases: ["이거나 되풀이"]
+
+# =============================================================================
+# Predicate logic
+# =============================================================================
+
+  - id: PRED.UNIVERSAL_QUANTIFIER
+    domain: predicate_logic
+    kind: quantifier
+    canonical_ko: 보편양화사
+    en: [universal quantifier]
+    symbol: ["∀"]
+    native_aliases: ["모든씨"]
+
+  - id: PRED.EXISTENTIAL_QUANTIFIER
+    domain: predicate_logic
+    kind: quantifier
+    canonical_ko: 존재양화사
+    en: [existential quantifier]
+    symbol: ["∃"]
+    native_aliases: ["몇몇씨"]
+
+  - id: PRED.QUANTIFIER
+    domain: predicate_logic
+    kind: concept
+    canonical_ko: 양화사
+    en: [quantifier]
+    native_aliases: ["모든몇몇씨"]
+
+  - id: PRED.QUANTIFICATIONAL_LOGIC
+    domain: predicate_logic
+    kind: subfield
+    canonical_ko:
+      - 양화논리
+      - 술어논리
+    en: [quantificational logic, predicate logic, first-order logic, FOL]
+    native_aliases: ["모든몇몇 말길", "풀이말 말길"]
+
+  - id: PRED.FORALL_INTRO
+    domain: predicate_logic
+    kind: inference_rule
+    canonical_ko:
+      - 보편 일반화
+      - 보편양화사 도입
+    en: [universal generalization, universal introduction]
+    symbol: ["∀I", "UG"]
+    schema:
+      - "P(a) ⊢ ∀x P(x)   (a arbitrary)"
+    native_aliases: ["모든 넣기"]
+
+  - id: PRED.FORALL_ELIM
+    domain: predicate_logic
+    kind: inference_rule
+    canonical_ko:
+      - 보편 예화
+      - 보편양화사 제거
+    en: [universal instantiation, universal elimination]
+    symbol: ["∀E", "UI"]
+    schema:
+      - "∀x P(x) ⊢ P(a)"
+    native_aliases: ["모든 없애기"]
+
+  - id: PRED.EXISTS_INTRO
+    domain: predicate_logic
+    kind: inference_rule
+    canonical_ko:
+      - 존재 일반화
+      - 존재양화사 도입
+    en: [existential generalization, existential introduction]
+    symbol: ["∃I", "EG"]
+    schema:
+      - "P(a) ⊢ ∃x P(x)"
+    native_aliases: ["몇몇 넣기"]
+
+  - id: PRED.EXISTS_ELIM
+    domain: predicate_logic
+    kind: inference_rule
+    canonical_ko:
+      - 존재 예화
+      - 존재양화사 제거
+    en: [existential instantiation, existential elimination]
+    symbol: ["∃E", "EI"]
+    schema:
+      - "∃x P(x), [P(a)] ⋯ C ⊢ C   (a fresh)"
+    native_aliases: ["몇몇 없애기"]
+
+  - id: PRED.QUANTIFIER_EXCHANGE_UNIV
+    domain: predicate_logic
+    kind: replacement_rule
+    canonical_ko: 보편양화사 교환규칙
+    en: [universal quantifier exchange]
+    schema:
+      - "¬∀x P(x) ≡ ∃x ¬P(x)"
+    native_aliases: ["모든 몇몇 바꿈"]
+
+  - id: PRED.QUANTIFIER_EXCHANGE_EXIST
+    domain: predicate_logic
+    kind: replacement_rule
+    canonical_ko: 존재양화사 교환규칙
+    en: [existential quantifier exchange]
+    schema:
+      - "¬∃x P(x) ≡ ∀x ¬P(x)"
+    native_aliases: ["몇몇 모든 바꿈"]
+
+  - id: PRED.CATEGORICAL_EQUIVALENCE
+    domain: predicate_logic
+    kind: replacement_rule
+    canonical_ko: 정언동치규칙
+    en: [categorical equivalence]
+    native_aliases: ["모든몇몇 달리 쓰기"]
+
+  - id: PRED.PREDICATE
+    domain: predicate_logic
+    kind: concept
+    canonical_ko: 술어
+    en: [predicate]
+    native_aliases: ["풀이말"]
+
+  - id: PRED.VARIABLE
+    domain: predicate_logic
+    kind: concept
+    canonical_ko: 변항
+    en: [variable]
+    native_aliases: ["떠돌이 홀이름"]
+
+  - id: PRED.CONSTANT
+    domain: predicate_logic
+    kind: concept
+    canonical_ko: 상항
+    en: [constant]
+    native_aliases: ["붙박이 홀이름"]
+
+  - id: PRED.SINGULAR_TERM
+    domain: predicate_logic
+    kind: concept
+    canonical_ko:
+      - 단칭어
+      - 고유명사
+    en: [singular term, proper noun]
+    native_aliases: ["홀이름"]
+
+# =============================================================================
+# Categorical sentences (Aristotelian-style)
+# =============================================================================
+
+  - id: SEM.UNIVERSAL_AFFIRMATIVE
+    domain: categorical_logic
+    kind: sentence_type
+    canonical_ko: 전칭긍정
+    en: [universal affirmative, A-proposition]
+    native_aliases: ["모두 그렇다"]
+
+  - id: SEM.UNIVERSAL_NEGATIVE
+    domain: categorical_logic
+    kind: sentence_type
+    canonical_ko: 전칭부정
+    en: [universal negative, E-proposition]
+    native_aliases: ["모두 아니다"]
+
+  - id: SEM.PARTICULAR_AFFIRMATIVE
+    domain: categorical_logic
+    kind: sentence_type
+    canonical_ko: 특칭긍정
+    en: [particular affirmative, I-proposition]
+    native_aliases: ["몇몇 그렇다"]
+
+  - id: SEM.PARTICULAR_NEGATIVE
+    domain: categorical_logic
+    kind: sentence_type
+    canonical_ko: 특칭부정
+    en: [particular negative, O-proposition]
+    native_aliases: ["몇몇 아니다"]
+
+  - id: SEM.CATEGORICAL_SENTENCE
+    domain: categorical_logic
+    kind: sentence_type
+    canonical_ko: 정언문장
+    en: [categorical sentence]
+    native_aliases: ["모든몇몇글월"]
+
+# =============================================================================
+# Sentences and syntactic categories
+# =============================================================================
+
+  - id: SEM.SENTENCE
+    domain: syntax
+    kind: concept
+    canonical_ko: 문장
+    en: [sentence]
+    native_aliases: ["글월"]
+
+  - id: SEM.SIMPLE_SENTENCE
+    domain: syntax
+    kind: concept
+    canonical_ko: 단순문
+    en: [simple sentence]
+    native_aliases: ["홀글월"]
+
+  - id: SEM.COMPOUND_SENTENCE
+    domain: syntax
+    kind: concept
+    canonical_ko: 복합문
+    en: [complex sentence, compound sentence]
+    native_aliases: ["겹글월"]
+
+  - id: SEM.SINGULAR_SENTENCE
+    domain: syntax
+    kind: concept
+    canonical_ko: 단칭문장
+    en: [singular sentence]
+    native_aliases: ["훌글월"]
+
+  - id: SEM.GENERAL_SENTENCE
+    domain: syntax
+    kind: concept
+    canonical_ko: 일반문장
+    en: [general sentence]
+    native_aliases: ["두루글월"]
+
+  - id: SEM.UNIVERSAL_SENTENCE
+    domain: syntax
+    kind: concept
+    canonical_ko: 전칭문장
+    en: [universal sentence]
+    native_aliases: ["모든글월"]
+
+  - id: SEM.PARTICULAR_SENTENCE
+    domain: syntax
+    kind: concept
+    canonical_ko: 특칭문장
+    en: [particular sentence]
+    native_aliases: ["몇몇글월"]
+
+  - id: SEM.CONDITIONAL_SENTENCE
+    domain: syntax
+    kind: concept
+    canonical_ko: 단순조건문
+    en: [conditional sentence]
+    native_aliases: ["그냥 이면글월"]
+
+  - id: SEM.BICONDITIONAL_SENTENCE
+    domain: syntax
+    kind: concept
+    canonical_ko: 쌍조건문
+    en: [biconditional sentence]
+    native_aliases: ["짝이면글월"]
+
+  - id: SEM.LOGICAL_TRUTH
+    domain: semantics
+    kind: concept
+    canonical_ko:
+      - 항진문장
+      - 논리적 참
+    en: [logical truth, tautology]
+    native_aliases: ["반드시 참말"]
+
+  - id: SEM.LOGICAL_FALSE
+    domain: semantics
+    kind: concept
+    canonical_ko:
+      - 항위문장
+      - 논리적 거짓
+    en: [logical falsehood, contradiction (tautological)]
+    native_aliases: ["반드시 거짓말"]
+
+  - id: SEM.LOGICAL_SENTENCE
+    domain: semantics
+    kind: concept
+    canonical_ko: 필연문장
+    en: [logical sentence]
+    native_aliases: ["반드시 글월"]
+
+  - id: SEM.CONTINGENT_SENTENCE
+    domain: semantics
+    kind: concept
+    canonical_ko: 우연문장
+    en: [contingent sentence]
+    native_aliases: ["어쩌다 글월"]
+
+  - id: SEM.CONTINGENT_TRUTH
+    domain: semantics
+    kind: concept
+    canonical_ko: 우연진실
+    en: [contingent truth]
+    native_aliases: ["어쩌다 참말"]
+
+  - id: SEM.CONTINGENT_FALSE
+    domain: semantics
+    kind: concept
+    canonical_ko: 우연허위
+    en: [contingent falsehood]
+    native_aliases: ["어쩌다 거짓말"]
+
+  - id: SEM.SENTENTIAL_OPERATOR
+    domain: syntax
+    kind: concept
+    canonical_ko: 문장연산자
+    en: [sentential operator]
+    native_aliases: ["글월 바꾸개"]
+
+  - id: SEM.SENTENTIAL_CONNECTIVE
+    domain: syntax
+    kind: concept
+    canonical_ko: 문장연결사
+    en: [sentential connective, logical connective]
+    native_aliases: ["글월 이음씨"]
+
+  - id: SEM.TRUTH_FUNCTIONAL_CONNECTIVE
+    domain: syntax
+    kind: concept
+    canonical_ko: 진리함수 문장연결사
+    en: [truth-functional sentential connective]
+    native_aliases: ["참 따른 글월 이음씨"]
+
+  - id: SEM.LOGICAL_FORM
+    domain: syntax
+    kind: concept
+    canonical_ko:
+      - 논리 형식
+      - 논리 구조
+    en: [logical form, logical structure]
+    native_aliases: ["말길 얼개"]
+
+  - id: SEM.LOGICAL_FORM_OF_SENTENCE
+    domain: syntax
+    kind: concept
+    canonical_ko: 문장형식
+    en: [logical form of sentence]
+    native_aliases: ["글월 얼개"]
+
+  - id: SEM.TRUTH_VALUE
+    domain: semantics
+    kind: concept
+    canonical_ko: 진리값
+    en: [truth value]
+    native_aliases: ["참값"]
+
+  - id: SEM.TRUTH_TABLE
+    domain: semantics
+    kind: concept
+    canonical_ko: 진리표
+    en: [truth table]
+    native_aliases: ["참값모눈"]
+
+  - id: SEM.TRUTH_TABLE_NEG
+    domain: semantics
+    kind: concept
+    canonical_ko: 부정의 진리표
+    en: [truth table for negation]
+    native_aliases: ["거짓이다의 참값모눈"]
+
+  - id: SEM.TRUTH_TABLE_CONJ
+    domain: semantics
+    kind: concept
+    canonical_ko: 연언의 진리표
+    en: [truth table for conjunction]
+    native_aliases: ["이고의 참값모눈"]
+
+  - id: SEM.TRUTH_TABLE_DISJ
+    domain: semantics
+    kind: concept
+    canonical_ko: 선언의 진리표
+    en: [truth table for disjunction]
+    native_aliases: ["이거나의 참값모눈"]
+
+  - id: SEM.TRUTH_TABLE_COND
+    domain: semantics
+    kind: concept
+    canonical_ko: 조건의 진리표
+    en: [truth table for conditional]
+    native_aliases: ["이면의 참값모눈"]
+
+  - id: SEM.TRUTH_PREDICATE
+    domain: semantics
+    kind: concept
+    canonical_ko: 진리술어
+    en: [truth predicate]
+    native_aliases: ["참 풀이말"]
+
+# =============================================================================
+# Terms and lexical categories
+# =============================================================================
+
+  - id: LEX.TERM
+    domain: lexicon
+    kind: concept
+    canonical_ko:
+      - 단어
+      - 용어
+      - 명사
+    en: [term]
+    native_aliases: ["낱말"]
+
+  - id: LEX.NOUN
+    domain: lexicon
+    kind: concept
+    canonical_ko: 명사
+    en: [noun]
+    native_aliases: ["이름"]
+
+  - id: LEX.GENERAL_TERM
+    domain: lexicon
+    kind: concept
+    canonical_ko:
+      - 일반어
+      - 보통명사
+    en: [general term, general noun]
+    native_aliases: ["두루이름"]
+
+  - id: LEX.DEFINITION
+    domain: lexicon
+    kind: concept
+    canonical_ko: 정의
+    en: [definition]
+    native_aliases: ["뜻매김"]
+
+  - id: LEX.MEANING
+    domain: lexicon
+    kind: concept
+    canonical_ko:
+      - 의미
+      - 내용
+    en: [meaning, sense, content]
+    native_aliases: ["뜻"]
+
+  - id: LEX.PROPOSITION
+    domain: lexicon
+    kind: concept
+    canonical_ko:
+      - 명제
+      - 진술
+    en: [proposition, statement]
+    native_aliases: ["말뜻"]
+
+# =============================================================================
+# Metalogical concepts — arguments, inference, validity
+# =============================================================================
+
+  - id: META.ARGUMENT
+    domain: metalogic
+    kind: concept
+    canonical_ko: 논증
+    en: [argument]
+    native_aliases: ["이끌어 보임"]
+
+  - id: META.INFERENCE
+    domain: metalogic
+    kind: concept
+    canonical_ko: 추론
+    en: [inference]
+    native_aliases: ["이끌기"]
+
+  - id: META.PREMISE
+    domain: metalogic
+    kind: concept
+    canonical_ko: 전제
+    en: [premise]
+    aliases_ko: [근거, 논거, 가정]
+    native_aliases: ["받침말"]
+
+  - id: META.CONCLUSION
+    domain: metalogic
+    kind: concept
+    canonical_ko: 결론
+    en: [conclusion]
+    aliases_ko: [귀결, 논지]
+    native_aliases: ["따름말"]
+
+  - id: META.ASSUMPTION
+    domain: metalogic
+    kind: concept
+    canonical_ko: 가정
+    en: [assumption, supposition]
+    native_aliases: ["여김말"]
+
+  - id: META.PREMISE_INDICATOR
+    domain: metalogic
+    kind: concept
+    canonical_ko: 전제 표시어
+    en: [premise indicator]
+    native_aliases: ["받침말 보람말"]
+
+  - id: META.CONCLUSION_INDICATOR
+    domain: metalogic
+    kind: concept
+    canonical_ko: 결론 표시어
+    en: [conclusion indicator]
+    native_aliases: ["따름말", "보람말"]
+
+  - id: META.INFERENCE_INDICATOR
+    domain: metalogic
+    kind: concept
+    canonical_ko: 추론 표시어
+    en: [inference indicator]
+    native_aliases: ["이끌기 보람말"]
+
+  - id: META.RULE_OF_INFERENCE
+    domain: metalogic
+    kind: concept
+    canonical_ko: 추론규칙
+    en: [rule of inference]
+    native_aliases: ["이끌기 틀"]
+
+  - id: META.DEDUCTIVE_INFERENCE
+    domain: metalogic
+    kind: concept
+    canonical_ko: 연역추론
+    en: [deductive inference]
+    native_aliases: ["반드시 이끌기"]
+
+  - id: META.INDUCTIVE_INFERENCE
+    domain: metalogic
+    kind: concept
+    canonical_ko: 귀납추론
+    en: [inductive inference]
+    native_aliases: ["아마도 이끌기"]
+
+  - id: META.ABDUCTIVE_INFERENCE
+    domain: metalogic
+    kind: concept
+    canonical_ko:
+      - 가설추론
+      - 가추법
+      - 최선의 설명으로의 추론
+    en: [abductive inference, abduction, inference to the best explanation, IBE]
+    note: "Not in source vocab; standard concept added for completeness."
+
+  - id: META.STRONG_INFERENCE
+    domain: metalogic
+    kind: concept
+    canonical_ko: 강한 추론
+    en: [strong inference]
+    native_aliases: ["강한 이끌기"]
+
+  - id: META.WEAK_INFERENCE
+    domain: metalogic
+    kind: concept
+    canonical_ko: 약한 추론
+    en: [weak inference]
+    native_aliases: ["약한 이끌기"]
+
+  - id: META.COGENT_INFERENCE
+    domain: metalogic
+    kind: concept
+    canonical_ko: 설득력 있는 추론
+    en: [cogent inference, persuasive inference]
+    native_aliases: ["힘있는 이끌기"]
+
+  - id: META.UNPERSUASIVE_INFERENCE
+    domain: metalogic
+    kind: concept
+    canonical_ko: 설득력 없는 추론
+    en: [unpersuasive inference]
+    native_aliases: ["힘없는 이끌기"]
+
+  - id: META.VALIDITY
+    domain: metalogic
+    kind: concept
+    canonical_ko:
+      - 타당성
+      - 타당한 추론
+    en: [validity, valid inference]
+    note: "전제가 모두 참이면 결론도 반드시 참인 추론."
+    native_aliases: ["마땅한 이끌기"]
+
+  - id: META.INVALIDITY
+    domain: metalogic
+    kind: concept
+    canonical_ko:
+      - 부당성
+      - 부당한 추론
+    en: [invalidity, invalid inference]
+    native_aliases: ["못마땅한 이끌기"]
+
+  - id: META.SOUNDNESS
+    domain: metalogic
+    kind: concept
+    canonical_ko:
+      - 건전성
+      - 건전한 추론
+    en: [soundness, sound inference]
+    note: "타당하고 전제가 모두 실제로 참인 추론."
+    native_aliases: ["튼튼한 이끌기"]
+
+  - id: META.CONSISTENCY
+    domain: metalogic
+    kind: concept
+    canonical_ko:
+      - 일관성
+      - 양립가능성
+    en: [consistency, compatibility]
+    native_aliases: ["나란한"]
+
+  - id: META.INCONSISTENCY
+    domain: metalogic
+    kind: concept
+    canonical_ko:
+      - 비일관성
+      - 양립불가능성
+    en: [inconsistency, incompatibility]
+    native_aliases: ["나란하지 않은"]
+
+  - id: META.CONTRADICTION
+    domain: metalogic
+    kind: concept
+    canonical_ko: 모순문장
+    en: [contradiction]
+    symbol: ["⊥"]
+    native_aliases: ["어긋난 말"]
+
+  - id: META.CONTRADICTORY
+    domain: metalogic
+    kind: concept
+    canonical_ko: 모순인
+    en: [contradictory]
+    native_aliases: ["어긋난"]
+
+  - id: META.IMPLICATION
+    domain: metalogic
+    kind: concept
+    canonical_ko: 함축
+    en: [implication, entailment]
+    symbol: ["⊨", "⊢"]
+    native_aliases: ["따라 나옴", "따라 나온다"]
+
+  - id: META.MUTUAL_ENTAILMENT
+    domain: metalogic
+    kind: concept
+    canonical_ko: 상호함축
+    en: [mutual entailment]
+    native_aliases: ["서로 따라 나옴"]
+
+  - id: META.LOGICAL_EQUIVALENCE
+    domain: metalogic
+    kind: concept
+    canonical_ko: 동치
+    en: [logical equivalence]
+    symbol: ["≡"]
+    native_aliases: ["같은 뜻", "같은 말"]
+
+  - id: META.PROOF
+    domain: metalogic
+    kind: concept
+    canonical_ko: 증명
+    en: [proof]
+    native_aliases: ["밝혀 보임"]
+
+  - id: META.NATURAL_DEDUCTION
+    domain: metalogic
+    kind: concept
+    canonical_ko: 자연연역
+    en: [natural deduction]
+    native_aliases: ["차근차근 이끌기"]
+
+  - id: META.NECESSARY_CONDITION
+    domain: metalogic
+    kind: concept
+    canonical_ko: 필요조건
+    en: [necessary condition]
+    native_aliases: ["있어야 하는 말"]
+
+  - id: META.SUFFICIENT_CONDITION
+    domain: metalogic
+    kind: concept
+    canonical_ko: 충분조건
+    en: [sufficient condition]
+    native_aliases: ["넉넉한 말"]
+
+  - id: META.LOGIC
+    domain: metalogic
+    kind: subfield
+    canonical_ko: 논리
+    en: [logic]
+    native_aliases: ["말길"]
+
+  - id: META.LOGICIAN
+    domain: metalogic
+    kind: concept
+    canonical_ko: 논리학자
+    en: [logician]
+    native_aliases: ["말길꾼"]
+
+  - id: META.SENTENTIAL_LOGIC
+    domain: metalogic
+    kind: subfield
+    canonical_ko:
+      - 문장논리
+      - 명제논리
+    en: [sentential logic, propositional logic]
+    native_aliases: ["글월 말길"]
+
+  - id: META.REASON
+    domain: metalogic
+    kind: concept
+    canonical_ko: 이유
+    en: [reason]
+    native_aliases: ["까닭"]
+
+  - id: META.CRITIQUE
+    domain: metalogic
+    kind: concept
+    canonical_ko: 비판
+    en: [critique]
+    native_aliases: ["따지기"]
+
+  - id: META.BELIEF
+    domain: epistemology
+    kind: concept
+    canonical_ko:
+      - 의견
+      - 신념
+      - 믿음
+    en: [belief, opinion]
+    native_aliases: ["믿음"]
+
+  - id: META.THOUGHT
+    domain: epistemology
+    kind: concept
+    canonical_ko: 사상
+    en: [thought]
+    native_aliases: ["생각"]

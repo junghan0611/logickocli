@@ -1,0 +1,162 @@
+# Normalization test cases — input expressions → canonical ID + response surface
+#
+# 사용자가 한말 / 한자말 / 영어 / 기호 중 어떤 표현으로 들어와도 같은 ID로
+# 정규화되어야 하며, 응답에서는 canonical_ko + symbol을 기본으로 쓴다.
+# native_aliases (한말)는 인식만 하고 응답에 절대 등장하지 않는다.
+
+version: "1.0"
+
+cases:
+
+  # PROP.CONJ_ELIM — 연언 제거
+  - inputs:
+      - "이고 없애기"
+      - "연언 제거"
+      - "단순화논법"
+      - "conjunction elimination"
+      - "simplification"
+      - "and elimination"
+      - "and-elim"
+      - "∧E"
+    expect_id: PROP.CONJ_ELIM
+    expect_canonical_ko_any_of: [연언 제거, 단순화논법]
+    expect_symbol_any_of: ["∧E"]
+    native_must_not_appear_in_response: ["이고 없애기"]
+
+  # PROP.MODUS_PONENS — 전건긍정
+  - inputs:
+      - "이면 없애기"
+      - "전건긍정"
+      - "조건문 제거"
+      - "긍정논법"
+      - "modus ponens"
+      - "implication elimination"
+      - "MP"
+      - "→E"
+    expect_id: PROP.MODUS_PONENS
+    expect_canonical_ko_any_of: [전건긍정, 조건문 제거, 긍정논법]
+    expect_symbol_any_of: ["MP", "→E"]
+    native_must_not_appear_in_response: ["이면 없애기"]
+
+  # PROP.MODUS_TOLLENS — 후건부정
+  - inputs:
+      - "뒤로 이면 없애기"
+      - "후건부정"
+      - "부정논법"
+      - "modus tollens"
+      - "MT"
+    expect_id: PROP.MODUS_TOLLENS
+    expect_canonical_ko_any_of: [후건부정, 부정논법]
+    expect_symbol_any_of: ["MT"]
+    native_must_not_appear_in_response: ["뒤로 이면 없애기"]
+
+  # PROP.RAA — 귀류법
+  - inputs:
+      - "거짓이다 넣기"
+      - "귀류법"
+      - "간접증명"
+      - "배리법"
+      - "reductio ad absurdum"
+      - "proof by contradiction"
+      - "RAA"
+    expect_id: PROP.RAA
+    expect_canonical_ko_any_of: [귀류법, 간접증명, 배리법]
+    expect_symbol_any_of: ["RAA", "¬I"]
+    native_must_not_appear_in_response: ["거짓이다 넣기"]
+
+  # PRED.FORALL_ELIM — 보편 예화
+  - inputs:
+      - "모든 없애기"
+      - "보편 예화"
+      - "universal instantiation"
+      - "UI"
+      - "∀E"
+    expect_id: PRED.FORALL_ELIM
+    expect_canonical_ko_any_of: [보편 예화, 보편양화사 제거]
+    expect_symbol_any_of: ["∀E", "UI"]
+    native_must_not_appear_in_response: ["모든 없애기"]
+
+  # PRED.EXISTS_INTRO — 존재 일반화
+  - inputs:
+      - "몇몇 넣기"
+      - "존재 일반화"
+      - "존재양화사 도입"
+      - "existential generalization"
+      - "EG"
+      - "∃I"
+    expect_id: PRED.EXISTS_INTRO
+    expect_canonical_ko_any_of: [존재 일반화, 존재양화사 도입]
+    expect_symbol_any_of: ["∃I", "EG"]
+    native_must_not_appear_in_response: ["몇몇 넣기"]
+
+  # META.VALIDITY — 타당성
+  - inputs:
+      - "마땅한 이끌기"
+      - "타당성"
+      - "타당한 추론"
+      - "validity"
+      - "valid inference"
+    expect_id: META.VALIDITY
+    expect_canonical_ko_any_of: [타당성, 타당한 추론]
+    native_must_not_appear_in_response: ["마땅한 이끌기"]
+
+  # META.SOUNDNESS — 건전성
+  - inputs:
+      - "튼튼한 이끌기"
+      - "건전성"
+      - "건전한 추론"
+      - "soundness"
+    expect_id: META.SOUNDNESS
+    expect_canonical_ko_any_of: [건전성, 건전한 추론]
+    native_must_not_appear_in_response: ["튼튼한 이끌기"]
+
+  # FALLACY.AFFIRMING_CONSEQUENT — 후건긍정의 오류
+  - inputs:
+      - "잘못된 뒤로 이면 없애기"
+      - "후건긍정의 오류"
+      - "affirming the consequent"
+    expect_id: FALLACY.AFFIRMING_CONSEQUENT
+    expect_canonical_ko_any_of: [후건긍정의 오류]
+    native_must_not_appear_in_response: ["잘못된 뒤로 이면 없애기"]
+
+  # FALLACY.DENYING_ANTECEDENT — 전건부정의 오류
+  - inputs:
+      - "잘못된 이면 없애기"
+      - "전건부정의 오류"
+      - "denying the antecedent"
+    expect_id: FALLACY.DENYING_ANTECEDENT
+    expect_canonical_ko_any_of: [전건부정의 오류]
+    native_must_not_appear_in_response: ["잘못된 이면 없애기"]
+
+  # META.NATURAL_DEDUCTION — 자연연역
+  - inputs:
+      - "차근차근 이끌기"
+      - "자연연역"
+      - "natural deduction"
+    expect_id: META.NATURAL_DEDUCTION
+    expect_canonical_ko_any_of: [자연연역]
+    native_must_not_appear_in_response: ["차근차근 이끌기"]
+
+  # META.PREMISE — 전제 (복수 한자말)
+  - inputs:
+      - "받침말"
+      - "전제"
+      - "근거"
+      - "논거"
+      - "가정"
+      - "premise"
+    expect_id_any_of: [META.PREMISE, META.ASSUMPTION]
+    expect_canonical_ko_any_of: [전제, 가정]
+    native_must_not_appear_in_response: ["받침말"]
+    note: "'가정'은 META.ASSUMPTION(supposition)으로 매핑되는 게 우선. premise 맥락이면 META.PREMISE."
+
+  # PRED.UNIVERSAL_QUANTIFIER — 보편양화사
+  - inputs:
+      - "모든씨"
+      - "보편양화사"
+      - "universal quantifier"
+      - "∀"
+    expect_id: PRED.UNIVERSAL_QUANTIFIER
+    expect_canonical_ko_any_of: [보편양화사]
+    expect_symbol_any_of: ["∀"]
+    native_must_not_appear_in_response: ["모든씨"]

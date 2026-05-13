@@ -1,0 +1,2048 @@
+{
+  "source_id": "20230617T120300",
+  "source_path": "/home/junghan/sync/org/notes/20230617T120300--용어-말꼴-배움낱말-테이블__dictionary_glossary_logic_orgtable.org",
+  "row_count": 141,
+  "duplicate_groups": [
+    {
+      "key": [
+        "logical equivalence",
+        "동치"
+      ],
+      "rows": [
+        2,
+        3
+      ]
+    },
+    {
+      "key": [
+        "implication entailment",
+        "함축"
+      ],
+      "rows": [
+        27,
+        28
+      ]
+    },
+    {
+      "key": [
+        "conclusion indicator",
+        "결론 표시어"
+      ],
+      "rows": [
+        30,
+        31
+      ]
+    },
+    {
+      "key": [
+        "conjunction",
+        "연언"
+      ],
+      "rows": [
+        93,
+        94
+      ]
+    },
+    {
+      "key": [
+        "conditional",
+        "조건문"
+      ],
+      "rows": [
+        112,
+        113
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "row": 1,
+      "en_raw": "strong inference",
+      "hanja_raw": "강한 추론",
+      "hanmal_raw": "강한 이끌기",
+      "en": "strong inference",
+      "hanja_alternates": [
+        "강한 추론"
+      ],
+      "hanmal_alternates": [
+        "강한 이끌기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 2,
+      "en_raw": "logical equivalence",
+      "hanja_raw": "동치",
+      "hanmal_raw": "같은 뜻",
+      "en": "logical equivalence",
+      "hanja_alternates": [
+        "동치"
+      ],
+      "hanmal_alternates": [
+        "같은 뜻"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 3,
+      "en_raw": "logical equivalence",
+      "hanja_raw": "동치",
+      "hanmal_raw": "같은 말",
+      "en": "logical equivalence",
+      "hanja_alternates": [
+        "동치"
+      ],
+      "hanmal_alternates": [
+        "같은 말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 4,
+      "en_raw": "equivalence rule",
+      "hanja_raw": "동치규칙",
+      "hanmal_raw": "같은 말 굴레",
+      "en": "equivalence rule",
+      "hanja_alternates": [
+        "동치규칙"
+      ],
+      "hanmal_alternates": [
+        "같은 말 굴레"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 5,
+      "en_raw": "indirect proof",
+      "hanja_raw": "간접증명ㆍ배리법ㆍ귀류법",
+      "hanmal_raw": "거짓이다 넣기",
+      "en": "indirect proof",
+      "hanja_alternates": [
+        "간접증명",
+        "배리법",
+        "귀류법"
+      ],
+      "hanmal_alternates": [
+        "거짓이다 넣기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 6,
+      "en_raw": "double negation rule",
+      "hanja_raw": "이중부정법",
+      "hanmal_raw": "거짓이다 없애기",
+      "en": "double negation rule",
+      "hanja_alternates": [
+        "이중부정법"
+      ],
+      "hanmal_alternates": [
+        "거짓이다 없애기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 7,
+      "en_raw": "negation",
+      "hanja_raw": "부정문",
+      "hanmal_raw": "거짓이다글월",
+      "en": "negation",
+      "hanja_alternates": [
+        "부정문"
+      ],
+      "hanmal_alternates": [
+        "거짓이다글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 8,
+      "en_raw": "truth table for negation",
+      "hanja_raw": "부정의 진리표",
+      "hanmal_raw": "거짓이다의 참값모눈",
+      "en": "truth table for negation",
+      "hanja_alternates": [
+        "부정의 진리표"
+      ],
+      "hanmal_alternates": [
+        "거짓이다의 참값모눈"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 9,
+      "en_raw": "complex sentence",
+      "hanja_raw": "복합문",
+      "hanmal_raw": "겹글월",
+      "en": "complex sentence",
+      "hanja_alternates": [
+        "복합문"
+      ],
+      "hanmal_alternates": [
+        "겹글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 10,
+      "en_raw": "conditional sentence",
+      "hanja_raw": "단순조건문",
+      "hanmal_raw": "그냥 이면글월",
+      "en": "conditional sentence",
+      "hanja_alternates": [
+        "단순조건문"
+      ],
+      "hanmal_alternates": [
+        "그냥 이면글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 11,
+      "en_raw": "sentence",
+      "hanja_raw": "문장",
+      "hanmal_raw": "글월",
+      "en": "sentence",
+      "hanja_alternates": [
+        "문장"
+      ],
+      "hanmal_alternates": [
+        "글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 12,
+      "en_raw": "sentential logic",
+      "hanja_raw": "문장논리",
+      "hanmal_raw": "클월 말길",
+      "en": "sentential logic",
+      "hanja_alternates": [
+        "문장논리"
+      ],
+      "hanmal_alternates": [
+        "클월 말길"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 13,
+      "en_raw": "sentential operator",
+      "hanja_raw": "문장연산자",
+      "hanmal_raw": "글월 바꾸개",
+      "en": "sentential operator",
+      "hanja_alternates": [
+        "문장연산자"
+      ],
+      "hanmal_alternates": [
+        "글월 바꾸개"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 14,
+      "en_raw": "logical form of sentence",
+      "hanja_raw": "문장형식",
+      "hanmal_raw": "글월 얼개",
+      "en": "logical form of sentence",
+      "hanja_alternates": [
+        "문장형식"
+      ],
+      "hanmal_alternates": [
+        "글월 얼개"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 15,
+      "en_raw": "sentential connective",
+      "hanja_raw": "문장연결사",
+      "hanmal_raw": "글월 이음씨",
+      "en": "sentential connective",
+      "hanja_alternates": [
+        "문장연결사"
+      ],
+      "hanmal_alternates": [
+        "글월 이음씨"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 16,
+      "en_raw": "reason",
+      "hanja_raw": "이유",
+      "hanmal_raw": "까닭",
+      "en": "reason",
+      "hanja_alternates": [
+        "이유"
+      ],
+      "hanmal_alternates": [
+        "까닭"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 17,
+      "en_raw": "inconsistent incompatible",
+      "hanja_raw": "비일관된ㆍ양립불가능한",
+      "hanmal_raw": "나란하지 않은",
+      "en": "inconsistent incompatible",
+      "hanja_alternates": [
+        "비일관된",
+        "양립불가능한"
+      ],
+      "hanmal_alternates": [
+        "나란하지 않은"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 18,
+      "en_raw": "consistent compatible",
+      "hanja_raw": "일관된ㆍ양립가능한",
+      "hanmal_raw": "나란한",
+      "en": "consistent compatible",
+      "hanja_alternates": [
+        "일관된",
+        "양립가능한"
+      ],
+      "hanmal_alternates": [
+        "나란한"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 19,
+      "en_raw": "term",
+      "hanja_raw": "단어 명사 용어",
+      "hanmal_raw": "낱말",
+      "en": "term",
+      "hanja_alternates": [
+        "단어 명사 용어"
+      ],
+      "hanmal_alternates": [
+        "낱말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 20,
+      "en_raw": "sufficient condition",
+      "hanja_raw": "충분조건",
+      "hanmal_raw": "넉넉한 말",
+      "en": "sufficient condition",
+      "hanja_alternates": [
+        "충분조건"
+      ],
+      "hanmal_alternates": [
+        "넉넉한 말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 21,
+      "en_raw": "inclusive disjunction",
+      "hanja_raw": "포괄 선언",
+      "hanmal_raw": "넓은 이거나",
+      "en": "inclusive disjunction",
+      "hanja_alternates": [
+        "포괄 선언"
+      ],
+      "hanmal_alternates": [
+        "넓은 이거나"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 22,
+      "en_raw": "replacement rule",
+      "hanja_raw": "치환규칙",
+      "hanmal_raw": "달리 쓰기 굴레",
+      "en": "replacement rule",
+      "hanja_alternates": [
+        "치환규칙"
+      ],
+      "hanmal_alternates": [
+        "달리 쓰기 굴레"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 23,
+      "en_raw": "double negation",
+      "hanja_raw": "이중부정",
+      "hanmal_raw": "두 번 거짓이다",
+      "en": "double negation",
+      "hanja_alternates": [
+        "이중부정"
+      ],
+      "hanmal_alternates": [
+        "두 번 거짓이다"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 24,
+      "en_raw": "general sentence",
+      "hanja_raw": "일반문장",
+      "hanmal_raw": "두루글월",
+      "en": "general sentence",
+      "hanja_alternates": [
+        "일반문장"
+      ],
+      "hanmal_alternates": [
+        "두루글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 25,
+      "en_raw": "general term general noun",
+      "hanja_raw": "일반어ㆍ보통명사",
+      "hanmal_raw": "두루이름",
+      "en": "general term general noun",
+      "hanja_alternates": [
+        "일반어",
+        "보통명사"
+      ],
+      "hanmal_alternates": [
+        "두루이름"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 26,
+      "en_raw": "Modus Tollens",
+      "hanja_raw": "부정논법",
+      "hanmal_raw": "뒤로 이면 없애기",
+      "en": "Modus Tollens",
+      "hanja_alternates": [
+        "부정논법"
+      ],
+      "hanmal_alternates": [
+        "뒤로 이면 없애기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 27,
+      "en_raw": "implication entailment",
+      "hanja_raw": "함축",
+      "hanmal_raw": "따라 나옴",
+      "en": "implication entailment",
+      "hanja_alternates": [
+        "함축"
+      ],
+      "hanmal_alternates": [
+        "따라 나옴"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 28,
+      "en_raw": "implication entailment",
+      "hanja_raw": "함축",
+      "hanmal_raw": "따라 나온다",
+      "en": "implication entailment",
+      "hanja_alternates": [
+        "함축"
+      ],
+      "hanmal_alternates": [
+        "따라 나온다"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 29,
+      "en_raw": "conclusion",
+      "hanja_raw": "걸론ㆍ귀걸ㆍ논지",
+      "hanmal_raw": "따름말",
+      "en": "conclusion",
+      "hanja_alternates": [
+        "결론",
+        "귀걸",
+        "논지"
+      ],
+      "hanmal_alternates": [
+        "따름말"
+      ],
+      "typo_fixed": true
+    },
+    {
+      "row": 30,
+      "en_raw": "conclusion indicator",
+      "hanja_raw": "결론 표시어",
+      "hanmal_raw": "따름말",
+      "en": "conclusion indicator",
+      "hanja_alternates": [
+        "결론 표시어"
+      ],
+      "hanmal_alternates": [
+        "따름말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 31,
+      "en_raw": "conclusion indicator",
+      "hanja_raw": "결론 표시어",
+      "hanmal_raw": "보람말",
+      "en": "conclusion indicator",
+      "hanja_alternates": [
+        "결론 표시어"
+      ],
+      "hanmal_alternates": [
+        "보람말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 32,
+      "en_raw": "conclusion indicator",
+      "hanja_raw": "따름말 보람말",
+      "hanmal_raw": "결론",
+      "en": "conclusion indicator",
+      "hanja_alternates": [
+        "따름말 보람말"
+      ],
+      "hanmal_alternates": [
+        "결론"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 33,
+      "en_raw": "critique",
+      "hanja_raw": "비판",
+      "hanmal_raw": "따지기",
+      "en": "critique",
+      "hanja_alternates": [
+        "비판"
+      ],
+      "hanmal_alternates": [
+        "따지기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 34,
+      "en_raw": "variable",
+      "hanja_raw": "변항",
+      "hanmal_raw": "떠돌이 홀이름",
+      "en": "variable",
+      "hanja_alternates": [
+        "변항"
+      ],
+      "hanmal_alternates": [
+        "떠돌이 홀이름"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 35,
+      "en_raw": "meaning: sense-content",
+      "hanja_raw": "의미ㆍ내용",
+      "hanmal_raw": "뜻",
+      "en": "meaning: sense-content",
+      "hanja_alternates": [
+        "의미",
+        "내용"
+      ],
+      "hanmal_alternates": [
+        "뜻"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 36,
+      "en_raw": "definition",
+      "hanja_raw": "정의",
+      "hanmal_raw": "뜻매김",
+      "en": "definition",
+      "hanja_alternates": [
+        "정의"
+      ],
+      "hanmal_alternates": [
+        "뜻매김"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 37,
+      "en_raw": "valid inference",
+      "hanja_raw": "타당한 추론",
+      "hanmal_raw": "마땅한 이끌기",
+      "en": "valid inference",
+      "hanja_alternates": [
+        "타당한 추론"
+      ],
+      "hanmal_alternates": [
+        "마땅한 이끌기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 38,
+      "en_raw": "logic",
+      "hanja_raw": "논리",
+      "hanmal_raw": "말길",
+      "en": "logic",
+      "hanja_alternates": [
+        "논리"
+      ],
+      "hanmal_alternates": [
+        "말길"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 39,
+      "en_raw": "logical form",
+      "hanja_raw": "논리 형식 논리 구조",
+      "hanmal_raw": "말길 얼개",
+      "en": "logical form",
+      "hanja_alternates": [
+        "논리 형식 논리 구조"
+      ],
+      "hanmal_alternates": [
+        "말길 얼개"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 40,
+      "en_raw": "logician",
+      "hanja_raw": "논리학자",
+      "hanmal_raw": "말길꾼",
+      "en": "logician",
+      "hanja_alternates": [
+        "논리학자"
+      ],
+      "hanmal_alternates": [
+        "말길꾼"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 41,
+      "en_raw": "proposition ‘statement",
+      "hanja_raw": "명제ㆍ진술",
+      "hanmal_raw": "말뜻",
+      "en": "proposition / statement",
+      "hanja_alternates": [
+        "명제",
+        "진술"
+      ],
+      "hanmal_alternates": [
+        "말뜻"
+      ],
+      "typo_fixed": true
+    },
+    {
+      "row": 42,
+      "en_raw": "particular affirmative",
+      "hanja_raw": "특칭긍정",
+      "hanmal_raw": "몇몇 그렇다",
+      "en": "particular affirmative",
+      "hanja_alternates": [
+        "특칭긍정"
+      ],
+      "hanmal_alternates": [
+        "몇몇 그렇다"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 43,
+      "en_raw": "existential generalization",
+      "hanja_raw": "존재일반화",
+      "hanmal_raw": "몇몇 넣기",
+      "en": "existential generalization",
+      "hanja_alternates": [
+        "존재일반화"
+      ],
+      "hanmal_alternates": [
+        "몇몇 넣기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 44,
+      "en_raw": "rule of existential quantifier change",
+      "hanja_raw": "존재양화사 교환규칙",
+      "hanmal_raw": "몇몇 모든 바꿈",
+      "en": "rule of existential quantifier change",
+      "hanja_alternates": [
+        "존재양화사 교환규칙"
+      ],
+      "hanmal_alternates": [
+        "몇몇 모든 바꿈"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 45,
+      "en_raw": "particular negative",
+      "hanja_raw": "특칭부정",
+      "hanmal_raw": "몇몇 아니다",
+      "en": "particular negative",
+      "hanja_alternates": [
+        "특칭부정"
+      ],
+      "hanmal_alternates": [
+        "몇몇 아니다"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 46,
+      "en_raw": "existential instantiation",
+      "hanja_raw": "존재예화",
+      "hanmal_raw": "몇몇 없애기",
+      "en": "existential instantiation",
+      "hanja_alternates": [
+        "존재예화"
+      ],
+      "hanmal_alternates": [
+        "몇몇 없애기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 47,
+      "en_raw": "particular sentence",
+      "hanja_raw": "특칭문장",
+      "hanmal_raw": "몇몇글월",
+      "en": "particular sentence",
+      "hanja_alternates": [
+        "특칭문장"
+      ],
+      "hanmal_alternates": [
+        "몇몇글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 48,
+      "en_raw": "existential quantifier",
+      "hanja_raw": "존재양화사",
+      "hanmal_raw": "몇몇씨",
+      "en": "existential quantifier",
+      "hanja_alternates": [
+        "존재양화사"
+      ],
+      "hanmal_alternates": [
+        "몇몇씨"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 49,
+      "en_raw": "universal affirmative",
+      "hanja_raw": "전칭긍정",
+      "hanmal_raw": "모두 그렇다",
+      "en": "universal affirmative",
+      "hanja_alternates": [
+        "전칭긍정"
+      ],
+      "hanmal_alternates": [
+        "모두 그렇다"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 50,
+      "en_raw": "universal negative",
+      "hanja_raw": "전칭부정",
+      "hanmal_raw": "모두 아니다",
+      "en": "universal negative",
+      "hanja_alternates": [
+        "전칭부정"
+      ],
+      "hanmal_alternates": [
+        "모두 아니다"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 51,
+      "en_raw": "universal generalization",
+      "hanja_raw": "보편일반화",
+      "hanmal_raw": "모든 넣기",
+      "en": "universal generalization",
+      "hanja_alternates": [
+        "보편일반화"
+      ],
+      "hanmal_alternates": [
+        "모든 넣기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 52,
+      "en_raw": "rule of universal quantifier change",
+      "hanja_raw": "보편양화사 교환규칙",
+      "hanmal_raw": "모든 몇몇 바꿈",
+      "en": "rule of universal quantifier change",
+      "hanja_alternates": [
+        "보편양화사 교환규칙"
+      ],
+      "hanmal_alternates": [
+        "모든 몇몇 바꿈"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 53,
+      "en_raw": "universal instantiation",
+      "hanja_raw": "보편예화",
+      "hanmal_raw": "모든 없애기",
+      "en": "universal instantiation",
+      "hanja_alternates": [
+        "보편예화"
+      ],
+      "hanmal_alternates": [
+        "모든 없애기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 54,
+      "en_raw": "universal sentence",
+      "hanja_raw": "전칭문장",
+      "hanmal_raw": "모든글월",
+      "en": "universal sentence",
+      "hanja_alternates": [
+        "전칭문장"
+      ],
+      "hanmal_alternates": [
+        "모든글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 55,
+      "en_raw": "categorical equivalence",
+      "hanja_raw": "정언동치규칙",
+      "hanmal_raw": "모든몇몇 달리 쓰기",
+      "en": "categorical equivalence",
+      "hanja_alternates": [
+        "정언동치규칙"
+      ],
+      "hanmal_alternates": [
+        "모든몇몇 달리 쓰기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 56,
+      "en_raw": "quantificationa logic",
+      "hanja_raw": "양화논리",
+      "hanmal_raw": "모든몇몇 말길",
+      "en": "quantificational logic",
+      "hanja_alternates": [
+        "양화논리"
+      ],
+      "hanmal_alternates": [
+        "모든몇몇 말길"
+      ],
+      "typo_fixed": true
+    },
+    {
+      "row": 57,
+      "en_raw": "quantificationa logic",
+      "hanja_raw": "모든몇몇 말길",
+      "hanmal_raw": "양화논리",
+      "en": "quantificational logic",
+      "hanja_alternates": [
+        "모든몇몇 말길"
+      ],
+      "hanmal_alternates": [
+        "양화논리"
+      ],
+      "typo_fixed": true
+    },
+    {
+      "row": 58,
+      "en_raw": "categorical sentence",
+      "hanja_raw": "정언문장",
+      "hanmal_raw": "모든몇몇글월",
+      "en": "categorical sentence",
+      "hanja_alternates": [
+        "정언문장"
+      ],
+      "hanmal_alternates": [
+        "모든몇몇글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 59,
+      "en_raw": "quantifier",
+      "hanja_raw": "양화사",
+      "hanmal_raw": "모든몇몇씨",
+      "en": "quantifier",
+      "hanja_alternates": [
+        "양화사"
+      ],
+      "hanmal_alternates": [
+        "모든몇몇씨"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 60,
+      "en_raw": "universal quantifier",
+      "hanja_raw": "보편양화사",
+      "hanmal_raw": "모든씨",
+      "en": "universal quantifier",
+      "hanja_alternates": [
+        "보편양화사"
+      ],
+      "hanmal_alternates": [
+        "모든씨"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 61,
+      "en_raw": "invalid inference",
+      "hanja_raw": "부당한 추론",
+      "hanmal_raw": "못마땅한 이끌기",
+      "en": "invalid inference",
+      "hanja_alternates": [
+        "부당한 추론"
+      ],
+      "hanmal_alternates": [
+        "못마땅한 이끌기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 62,
+      "en_raw": "belief opinion",
+      "hanja_raw": "의견ㆍ신념",
+      "hanmal_raw": "믿음",
+      "en": "belief opinion",
+      "hanja_alternates": [
+        "의견",
+        "신념"
+      ],
+      "hanmal_alternates": [
+        "믿음"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 63,
+      "en_raw": "logical false",
+      "hanja_raw": "항위문장",
+      "hanmal_raw": "반드시 거짓말",
+      "en": "logical false",
+      "hanja_alternates": [
+        "항위문장"
+      ],
+      "hanmal_alternates": [
+        "반드시 거짓말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 64,
+      "en_raw": "logical sentence",
+      "hanja_raw": "필연문장",
+      "hanmal_raw": "반드시 글월",
+      "en": "logical sentence",
+      "hanja_alternates": [
+        "필연문장"
+      ],
+      "hanmal_alternates": [
+        "반드시 글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 65,
+      "en_raw": "deductive inference",
+      "hanja_raw": "연역추론",
+      "hanmal_raw": "반드시 이끌기",
+      "en": "deductive inference",
+      "hanja_alternates": [
+        "연역추론"
+      ],
+      "hanmal_alternates": [
+        "반드시 이끌기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 66,
+      "en_raw": "logical truth",
+      "hanja_raw": "항진문장",
+      "hanmal_raw": "반드시 참말",
+      "en": "logical truth",
+      "hanja_alternates": [
+        "항진문장"
+      ],
+      "hanmal_alternates": [
+        "반드시 참말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 67,
+      "en_raw": "premise",
+      "hanja_raw": "전제ㆍ근거ㆍ논거ㆍ가정",
+      "hanmal_raw": "받침말",
+      "en": "premise",
+      "hanja_alternates": [
+        "전제",
+        "근거",
+        "논거",
+        "가정"
+      ],
+      "hanmal_alternates": [
+        "받침말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 68,
+      "en_raw": "premise",
+      "hanja_raw": "받침말",
+      "hanmal_raw": "전제",
+      "en": "premise",
+      "hanja_alternates": [
+        "받침말"
+      ],
+      "hanmal_alternates": [
+        "전제"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 69,
+      "en_raw": "premise indicator",
+      "hanja_raw": "전제 표시어",
+      "hanmal_raw": "받침말 보람말",
+      "en": "premise indicator",
+      "hanja_alternates": [
+        "전제 표시어"
+      ],
+      "hanmal_alternates": [
+        "받침말 보람말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 70,
+      "en_raw": "proof",
+      "hanja_raw": "증명",
+      "hanmal_raw": "밝혀 보임",
+      "en": "proof",
+      "hanja_alternates": [
+        "증명"
+      ],
+      "hanmal_alternates": [
+        "밝혀 보임"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 71,
+      "en_raw": "constant",
+      "hanja_raw": "상항",
+      "hanmal_raw": "붙박이 홀이름",
+      "en": "constant",
+      "hanja_alternates": [
+        "상항"
+      ],
+      "hanmal_alternates": [
+        "붙박이 홀이름"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 72,
+      "en_raw": "thought",
+      "hanja_raw": "사상",
+      "hanmal_raw": "생각",
+      "en": "thought",
+      "hanja_alternates": [
+        "사상"
+      ],
+      "hanmal_alternates": [
+        "생각"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 73,
+      "en_raw": "mutual entailment",
+      "hanja_raw": "상호함축",
+      "hanmal_raw": "서로 따라 나옴",
+      "en": "mutual entailment",
+      "hanja_alternates": [
+        "상호함축"
+      ],
+      "hanmal_alternates": [
+        "서로 따라 나옴"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 74,
+      "en_raw": "inductive inference",
+      "hanja_raw": "귀납추론",
+      "hanmal_raw": "아마도 이끌기",
+      "en": "inductive inference",
+      "hanja_alternates": [
+        "귀납추론"
+      ],
+      "hanmal_alternates": [
+        "아마도 이끌기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 75,
+      "en_raw": "weak inferes",
+      "hanja_raw": "약한 추론",
+      "hanmal_raw": "약한 이끌기",
+      "en": "weak inference",
+      "hanja_alternates": [
+        "약한 추론"
+      ],
+      "hanmal_alternates": [
+        "약한 이끌기"
+      ],
+      "typo_fixed": true
+    },
+    {
+      "row": 76,
+      "en_raw": "contradictory",
+      "hanja_raw": "모순인",
+      "hanmal_raw": "어긋난",
+      "en": "contradictory",
+      "hanja_alternates": [
+        "모순인"
+      ],
+      "hanmal_alternates": [
+        "어긋난"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 77,
+      "en_raw": "contradiction",
+      "hanja_raw": "모순문장",
+      "hanmal_raw": "어긋난 말",
+      "en": "contradiction",
+      "hanja_alternates": [
+        "모순문장"
+      ],
+      "hanmal_alternates": [
+        "어긋난 말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 78,
+      "en_raw": "contradiction ?",
+      "hanja_raw": "어긋난 말",
+      "hanmal_raw": "모순문장",
+      "en": "contradiction ?",
+      "hanja_alternates": [
+        "어긋난 말"
+      ],
+      "hanmal_alternates": [
+        "모순문장"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 79,
+      "en_raw": "contingent false",
+      "hanja_raw": "우연허위",
+      "hanmal_raw": "어쩌다 거짓말",
+      "en": "contingent false",
+      "hanja_alternates": [
+        "우연허위"
+      ],
+      "hanmal_alternates": [
+        "어쩌다 거짓말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 80,
+      "en_raw": "contingent sentence",
+      "hanja_raw": "우연문장",
+      "hanmal_raw": "어쩌다 글월",
+      "en": "contingent sentence",
+      "hanja_alternates": [
+        "우연문장"
+      ],
+      "hanmal_alternates": [
+        "어쩌다 글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 81,
+      "en_raw": "contingent truth",
+      "hanja_raw": "우연진실",
+      "hanmal_raw": "어쩌다 참말",
+      "en": "contingent truth",
+      "hanja_alternates": [
+        "우연진실"
+      ],
+      "hanmal_alternates": [
+        "어쩌다 참말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 82,
+      "en_raw": "assumption ‘supposition",
+      "hanja_raw": "가정",
+      "hanmal_raw": "여김말",
+      "en": "assumption / supposition",
+      "hanja_alternates": [
+        "가정"
+      ],
+      "hanmal_alternates": [
+        "여김말"
+      ],
+      "typo_fixed": true
+    },
+    {
+      "row": 83,
+      "en_raw": "disjunction",
+      "hanja_raw": "선언",
+      "hanmal_raw": "이거나",
+      "en": "disjunction",
+      "hanja_alternates": [
+        "선언"
+      ],
+      "hanmal_alternates": [
+        "이거나"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 84,
+      "en_raw": "disjunction",
+      "hanja_raw": "선언문",
+      "hanmal_raw": "이거나글월",
+      "en": "disjunction",
+      "hanja_alternates": [
+        "선언문"
+      ],
+      "hanmal_alternates": [
+        "이거나글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 85,
+      "en_raw": "distributivity of disjunction",
+      "hanja_raw": "선언 배분규칙",
+      "hanmal_raw": "이거나 나눔",
+      "en": "distributivity of disjunction",
+      "hanja_alternates": [
+        "선언 배분규칙"
+      ],
+      "hanmal_alternates": [
+        "이거나 나눔"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 86,
+      "en_raw": "addition rule",
+      "hanja_raw": "첨가논법",
+      "hanmal_raw": "이거나 넣기",
+      "en": "addition rule",
+      "hanja_alternates": [
+        "첨가논법"
+      ],
+      "hanmal_alternates": [
+        "이거나 넣기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 87,
+      "en_raw": "disjunctive tautology",
+      "hanja_raw": "선언 동어반복",
+      "hanmal_raw": "이거나 되풀이",
+      "en": "disjunctive tautology",
+      "hanja_alternates": [
+        "선언 동어반복"
+      ],
+      "hanmal_alternates": [
+        "이거나 되풀이"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 88,
+      "en_raw": "DeMorgan' rule of disjunction",
+      "hanja_raw": "선언 드 모르강 규칙",
+      "hanmal_raw": "이거나 모아 거짓이다",
+      "en": "De Morgan's rule of disjunction",
+      "hanja_alternates": [
+        "선언 드 모르강 규칙"
+      ],
+      "hanmal_alternates": [
+        "이거나 모아 거짓이다"
+      ],
+      "typo_fixed": true
+    },
+    {
+      "row": 89,
+      "en_raw": "associativity of disjunction",
+      "hanja_raw": "선언 결합규칙",
+      "hanmal_raw": "이거나 새로 모음",
+      "en": "associativity of disjunction",
+      "hanja_alternates": [
+        "선언 결합규칙"
+      ],
+      "hanmal_alternates": [
+        "이거나 새로 모음"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 90,
+      "en_raw": "commutativity of disjunction",
+      "hanja_raw": "선언 교환규칙",
+      "hanmal_raw": "이거나 앞뒤 바꿈",
+      "en": "commutativity of disjunction",
+      "hanja_alternates": [
+        "선언 교환규칙"
+      ],
+      "hanmal_alternates": [
+        "이거나 앞뒤 바꿈"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 91,
+      "en_raw": "disjunctive syllogism",
+      "hanja_raw": "선언 삼단논법",
+      "hanmal_raw": "이거나 없애기",
+      "en": "disjunctive syllogism",
+      "hanja_alternates": [
+        "선언 삼단논법"
+      ],
+      "hanmal_alternates": [
+        "이거나 없애기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 92,
+      "en_raw": "truth table for disjunction",
+      "hanja_raw": "선언의 진리표",
+      "hanmal_raw": "이거나의 참값모눈",
+      "en": "truth table for disjunction",
+      "hanja_alternates": [
+        "선언의 진리표"
+      ],
+      "hanmal_alternates": [
+        "이거나의 참값모눈"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 93,
+      "en_raw": "conjunction",
+      "hanja_raw": "연언",
+      "hanmal_raw": "이고",
+      "en": "conjunction",
+      "hanja_alternates": [
+        "연언"
+      ],
+      "hanmal_alternates": [
+        "이고"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 94,
+      "en_raw": "conjunction",
+      "hanja_raw": "연언",
+      "hanmal_raw": "이고글월",
+      "en": "conjunction",
+      "hanja_alternates": [
+        "연언"
+      ],
+      "hanmal_alternates": [
+        "이고글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 95,
+      "en_raw": "distributivity of conjunction",
+      "hanja_raw": "연언 배분규칙",
+      "hanmal_raw": "이고 나눔",
+      "en": "distributivity of conjunction",
+      "hanja_alternates": [
+        "연언 배분규칙"
+      ],
+      "hanmal_alternates": [
+        "이고 나눔"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 96,
+      "en_raw": "conjunction rule",
+      "hanja_raw": "연언논법",
+      "hanmal_raw": "이고 넣기",
+      "en": "conjunction rule",
+      "hanja_alternates": [
+        "연언논법"
+      ],
+      "hanmal_alternates": [
+        "이고 넣기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 97,
+      "en_raw": "conjunctive tautology",
+      "hanja_raw": "연언 동어반복",
+      "hanmal_raw": "이고 되풀이",
+      "en": "conjunctive tautology",
+      "hanja_alternates": [
+        "연언 동어반복"
+      ],
+      "hanmal_alternates": [
+        "이고 되풀이"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 98,
+      "en_raw": "DeMorgan' rule of conjunction",
+      "hanja_raw": "연언 드 모르강 규칙",
+      "hanmal_raw": "이고 모아 거짓이다",
+      "en": "De Morgan's rule of conjunction",
+      "hanja_alternates": [
+        "연언 드 모르강 규칙"
+      ],
+      "hanmal_alternates": [
+        "이고 모아 거짓이다"
+      ],
+      "typo_fixed": true
+    },
+    {
+      "row": 99,
+      "en_raw": "associativity of conjunction",
+      "hanja_raw": "연언 결합규칙",
+      "hanmal_raw": "이고 새로 모음",
+      "en": "associativity of conjunction",
+      "hanja_alternates": [
+        "연언 결합규칙"
+      ],
+      "hanmal_alternates": [
+        "이고 새로 모음"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 100,
+      "en_raw": "commutativity of conjunction",
+      "hanja_raw": "연언 교환규칙",
+      "hanmal_raw": "이고 앞뒤 바꿈",
+      "en": "commutativity of conjunction",
+      "hanja_alternates": [
+        "연언 교환규칙"
+      ],
+      "hanmal_alternates": [
+        "이고 앞뒤 바꿈"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 101,
+      "en_raw": "simplification rule",
+      "hanja_raw": "단순화논법",
+      "hanmal_raw": "이고 없애기",
+      "en": "simplification rule",
+      "hanja_alternates": [
+        "단순화논법"
+      ],
+      "hanmal_alternates": [
+        "이고 없애기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 102,
+      "en_raw": "truth table for conjunction",
+      "hanja_raw": "연언의 진리표",
+      "hanmal_raw": "이고의 참값모눈",
+      "en": "truth table for conjunction",
+      "hanja_alternates": [
+        "연언의 진리표"
+      ],
+      "hanmal_alternates": [
+        "이고의 참값모눈"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 103,
+      "en_raw": "truth table for conjunction ?!",
+      "hanja_raw": "연언",
+      "hanmal_raw": "이고의",
+      "en": "truth table for conjunction ?!",
+      "hanja_alternates": [
+        "연언"
+      ],
+      "hanmal_alternates": [
+        "이고의"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 104,
+      "en_raw": "inference",
+      "hanja_raw": "추론",
+      "hanmal_raw": "이끌기",
+      "en": "inference",
+      "hanja_alternates": [
+        "추론"
+      ],
+      "hanmal_alternates": [
+        "이끌기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 105,
+      "en_raw": "inference",
+      "hanja_raw": "이끌기",
+      "hanmal_raw": "추론",
+      "en": "inference",
+      "hanja_alternates": [
+        "이끌기"
+      ],
+      "hanmal_alternates": [
+        "추론"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 106,
+      "en_raw": "inference indicator",
+      "hanja_raw": "추론 표시어",
+      "hanmal_raw": "이끌기 보람말",
+      "en": "inference indicator",
+      "hanja_alternates": [
+        "추론 표시어"
+      ],
+      "hanmal_alternates": [
+        "이끌기 보람말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 107,
+      "en_raw": "rule of inference",
+      "hanja_raw": "추론규칙",
+      "hanmal_raw": "이끌기 틀",
+      "en": "rule of inference",
+      "hanja_alternates": [
+        "추론규칙"
+      ],
+      "hanmal_alternates": [
+        "이끌기 틀"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 108,
+      "en_raw": "argument",
+      "hanja_raw": "논증",
+      "hanmal_raw": "이끌어 보임",
+      "en": "argument",
+      "hanja_alternates": [
+        "논증"
+      ],
+      "hanmal_alternates": [
+        "이끌어 보임"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 109,
+      "en_raw": "argument by cases",
+      "hanja_raw": "경우에 의한 증명ㆍ양도논법",
+      "hanmal_raw": "이러나저러나",
+      "en": "argument by cases",
+      "hanja_alternates": [
+        "경우에 의한 증명",
+        "양도논법"
+      ],
+      "hanmal_alternates": [
+        "이러나저러나"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 110,
+      "en_raw": "exportation rule",
+      "hanja_raw": "추출규칙",
+      "hanmal_raw": "이렇고 저렇다면",
+      "en": "exportation rule",
+      "hanja_alternates": [
+        "추출규칙"
+      ],
+      "hanmal_alternates": [
+        "이렇고 저렇다면"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 111,
+      "en_raw": "noun",
+      "hanja_raw": "명사",
+      "hanmal_raw": "이름",
+      "en": "noun",
+      "hanja_alternates": [
+        "명사"
+      ],
+      "hanmal_alternates": [
+        "이름"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 112,
+      "en_raw": "conditional",
+      "hanja_raw": "조건문",
+      "hanmal_raw": "이면글월",
+      "en": "conditional",
+      "hanja_alternates": [
+        "조건문"
+      ],
+      "hanmal_alternates": [
+        "이면글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 113,
+      "en_raw": "conditional",
+      "hanja_raw": "조건문",
+      "hanmal_raw": "이면",
+      "en": "conditional",
+      "hanja_alternates": [
+        "조건문"
+      ],
+      "hanmal_alternates": [
+        "이면"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 114,
+      "en_raw": "conditional proof",
+      "hanja_raw": "조건증명법",
+      "hanmal_raw": "이면 넣기",
+      "en": "conditional proof",
+      "hanja_alternates": [
+        "조건증명법"
+      ],
+      "hanmal_alternates": [
+        "이면 넣기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 115,
+      "en_raw": "transposition rule",
+      "hanja_raw": "대우규칙",
+      "hanmal_raw": "이면 앞뒤 바꿈",
+      "en": "transposition rule",
+      "hanja_alternates": [
+        "대우규칙"
+      ],
+      "hanmal_alternates": [
+        "이면 앞뒤 바꿈"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 116,
+      "en_raw": "antecedent",
+      "hanja_raw": "전건",
+      "hanmal_raw": "이면 앞말",
+      "en": "antecedent",
+      "hanja_alternates": [
+        "전건"
+      ],
+      "hanmal_alternates": [
+        "이면 앞말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 117,
+      "en_raw": "Modus Ponens",
+      "hanja_raw": "긍정논법",
+      "hanmal_raw": "이면 없애기",
+      "en": "Modus Ponens",
+      "hanja_alternates": [
+        "긍정논법"
+      ],
+      "hanmal_alternates": [
+        "이면 없애기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 118,
+      "en_raw": "conditional exchange rule",
+      "hanja_raw": "조건규칙",
+      "hanmal_raw": "이면 이거나 바꿈",
+      "en": "conditional exchange rule",
+      "hanja_alternates": [
+        "조건규칙"
+      ],
+      "hanmal_alternates": [
+        "이면 이거나 바꿈"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 119,
+      "en_raw": "hypothetical syllogism",
+      "hanja_raw": "가언 삼단논법ㆍ연쇄논법",
+      "hanmal_raw": "이면 잇기",
+      "en": "hypothetical syllogism",
+      "hanja_alternates": [
+        "가언 삼단논법",
+        "연쇄논법"
+      ],
+      "hanmal_alternates": [
+        "이면 잇기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 120,
+      "en_raw": "truth table for conditional",
+      "hanja_raw": "조건의 진리표",
+      "hanmal_raw": "이면의 참값모눈",
+      "en": "truth table for conditional",
+      "hanja_alternates": [
+        "조건의 진리표"
+      ],
+      "hanmal_alternates": [
+        "이면의 참값모눈"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 121,
+      "en_raw": "if and only if",
+      "hanja_raw": "인 경우 오직 그 경우에만",
+      "hanmal_raw": "일 때 오직 그때만",
+      "en": "if and only if",
+      "hanja_alternates": [
+        "인 경우 오직 그 경우에만"
+      ],
+      "hanmal_alternates": [
+        "일 때 오직 그때만"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 122,
+      "en_raw": "necessary condition",
+      "hanja_raw": "필요조건",
+      "hanmal_raw": "있어야 하는 말",
+      "en": "necessary condition",
+      "hanja_alternates": [
+        "필요조건"
+      ],
+      "hanmal_alternates": [
+        "있어야 하는 말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 123,
+      "en_raw": "fallacy",
+      "hanja_raw": "오류",
+      "hanmal_raw": "잘못 이끌기",
+      "en": "fallacy",
+      "hanja_alternates": [
+        "오류"
+      ],
+      "hanmal_alternates": [
+        "잘못 이끌기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 124,
+      "en_raw": "affirming the consequent",
+      "hanja_raw": "후건긍정의 오류",
+      "hanmal_raw": "잘못된 뒤로 이면 없애기",
+      "en": "affirming the consequent",
+      "hanja_alternates": [
+        "후건긍정의 오류"
+      ],
+      "hanmal_alternates": [
+        "잘못된 뒤로 이면 없애기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 125,
+      "en_raw": "denying the antecedent",
+      "hanja_raw": "전건부정의 오류",
+      "hanmal_raw": "잘못된 이면 없애기",
+      "en": "denying the antecedent",
+      "hanja_alternates": [
+        "전건부정의 오류"
+      ],
+      "hanmal_alternates": [
+        "잘못된 이면 없애기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 126,
+      "en_raw": "exclusive disjunction",
+      "hanja_raw": "배타 선언",
+      "hanmal_raw": "좁은 이거나",
+      "en": "exclusive disjunction",
+      "hanja_alternates": [
+        "배타 선언"
+      ],
+      "hanmal_alternates": [
+        "좁은 이거나"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 127,
+      "en_raw": "biconditional",
+      "hanja_raw": "쌍조건",
+      "hanmal_raw": "짝이면",
+      "en": "biconditional",
+      "hanja_alternates": [
+        "쌍조건"
+      ],
+      "hanmal_alternates": [
+        "짝이면"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 128,
+      "en_raw": "biconditional sentence",
+      "hanja_raw": "쌍조건문",
+      "hanmal_raw": "짝이면글월",
+      "en": "biconditional sentence",
+      "hanja_alternates": [
+        "쌍조건문"
+      ],
+      "hanmal_alternates": [
+        "짝이면글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 129,
+      "en_raw": "natural deduction",
+      "hanja_raw": "자연연역",
+      "hanmal_raw": "차근차근 이끌기",
+      "en": "natural deduction",
+      "hanja_alternates": [
+        "자연연역"
+      ],
+      "hanmal_alternates": [
+        "차근차근 이끌기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 130,
+      "en_raw": "truth-functional sentential",
+      "hanja_raw": "진리함수 문장연결사",
+      "hanmal_raw": "참 따른 글월 이음씨",
+      "en": "truth-functional sentential",
+      "hanja_alternates": [
+        "진리함수 문장연결사"
+      ],
+      "hanmal_alternates": [
+        "참 따른 글월 이음씨"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 131,
+      "en_raw": "truth predicate",
+      "hanja_raw": "진리술어",
+      "hanmal_raw": "참 풀이말",
+      "en": "truth predicate",
+      "hanja_alternates": [
+        "진리술어"
+      ],
+      "hanmal_alternates": [
+        "참 풀이말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 132,
+      "en_raw": "truth value",
+      "hanja_raw": "진리값",
+      "hanmal_raw": "참값",
+      "en": "truth value",
+      "hanja_alternates": [
+        "진리값"
+      ],
+      "hanmal_alternates": [
+        "참값"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 133,
+      "en_raw": "truth table",
+      "hanja_raw": "진리표",
+      "hanmal_raw": "참값모눈",
+      "en": "truth table",
+      "hanja_alternates": [
+        "진리표"
+      ],
+      "hanmal_alternates": [
+        "참값모눈"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 134,
+      "en_raw": "sound inference",
+      "hanja_raw": "건전한 추론",
+      "hanmal_raw": "튼튼한 이끌기",
+      "en": "sound inference",
+      "hanja_alternates": [
+        "건전한 추론"
+      ],
+      "hanmal_alternates": [
+        "튼튼한 이끌기"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 135,
+      "en_raw": "predicate",
+      "hanja_raw": "술어",
+      "hanmal_raw": "풀이말",
+      "en": "predicate",
+      "hanja_alternates": [
+        "술어"
+      ],
+      "hanmal_alternates": [
+        "풀이말"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 136,
+      "en_raw": "predicate logic",
+      "hanja_raw": "술어논리",
+      "hanmal_raw": "풀이말 말길",
+      "en": "predicate logic",
+      "hanja_alternates": [
+        "술어논리"
+      ],
+      "hanmal_alternates": [
+        "풀이말 말길"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 137,
+      "en_raw": "singular sentence",
+      "hanja_raw": "단칭문장",
+      "hanmal_raw": "훌글월",
+      "en": "singular sentence",
+      "hanja_alternates": [
+        "단칭문장"
+      ],
+      "hanmal_alternates": [
+        "훌글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 138,
+      "en_raw": "singular term: proper noun",
+      "hanja_raw": "단칭어:고유명사",
+      "hanmal_raw": "홀이름",
+      "en": "singular term: proper noun",
+      "hanja_alternates": [
+        "단칭어:고유명사"
+      ],
+      "hanmal_alternates": [
+        "홀이름"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 139,
+      "en_raw": "simple sentence",
+      "hanja_raw": "단순문",
+      "hanmal_raw": "홀글월",
+      "en": "simple sentence",
+      "hanja_alternates": [
+        "단순문"
+      ],
+      "hanmal_alternates": [
+        "홀글월"
+      ],
+      "typo_fixed": false
+    },
+    {
+      "row": 140,
+      "en_raw": "cogent- persuasive inference",
+      "hanja_raw": "설득력 있는 추론",
+      "hanmal_raw": "힘있는 이끌기",
+      "en": "cogent / persuasive inference",
+      "hanja_alternates": [
+        "설득력 있는 추론"
+      ],
+      "hanmal_alternates": [
+        "힘있는 이끌기"
+      ],
+      "typo_fixed": true
+    },
+    {
+      "row": 141,
+      "en_raw": "unpersuasive inference",
+      "hanja_raw": "설득력 없는 추론",
+      "hanmal_raw": "힘없는 이끌기",
+      "en": "unpersuasive inference",
+      "hanja_alternates": [
+        "설득력 없는 추론"
+      ],
+      "hanmal_alternates": [
+        "힘없는 이끌기"
+      ],
+      "typo_fixed": false
+    }
+  ]
+}
