@@ -13,10 +13,11 @@
 
 ## 다음 한 걸음
 
-### 1. SKILL.md 한 turn 실사용 검증
+### 1. 모드 계약 한 turn 실사용 검증
 
-- agent-config 또는 logickocli SKILL.md를 로드한 세션에서 실제 한국어 논증
-  대화를 한 turn 돌려보고, frame이 자연스럽게 적용되는지 본다.
+- 호스트 SKILL.md (예: agent-config/skills/logickocli/SKILL.md) 가 이 리포의
+  `references/skill-contract.md` 를 참조해 로드된 세션에서 실제 한국어 논증
+  대화를 한 turn 돌려보고, frame 이 자연스럽게 적용되는지 본다.
 - `tests/argument-analysis.yaml` 의 케이스 한두 개를 자연어 입력으로 던져
   `expect_must_identify` 항목이 실제 응답에 등장하는지 손으로 확인.
 - 어색하면 `references/argument-frame.md` 를 조정.

@@ -76,28 +76,33 @@
 
 ```
 logickocli/
-  SKILL.md             # 에이전트 스킬 진입점
   AGENTS.md            # 이 파일 — 담당자 호출용
   README.md            # 외부 사용자 대상
   NEXT.md              # 다음 작업 닻 (휘발성)
+  LICENSE              # MIT
 
   vocab/
     core.yaml          # 표준 논리 어휘 (PROP/PRED/META/SEM/LEX/RULE 도메인)
     fallacies.yaml     # 형식·비형식 오류 카탈로그
+    SCHEMA.md          # 필드 명세 + alias 충돌 정책 + 입력 인식 우선순위
     raw.json           # 원자료 audit
 
   references/
+    skill-contract.md  # 에이전트 모드 계약 본문 (호스트 SKILL.md 가 참조)
     inference-rules.md # 자연연역 + 술어 + 치환규칙 카드
     modal-systems.md   # K/T/S4/S5/GL cheat sheet
     argument-frame.md  # 분석 출력 frame 명세
 
   scripts/
     extract_org_table.py  # 가든 노트 → raw.json 재추출
+    check_vocab.py        # 자가 검증 (항목 수 / 충돌 / 스키마 / dangling test ID)
 
   tests/
     normalization.yaml    # 입력 표현 → ID 매핑 기대값
     argument-analysis.yaml # 자연어 논증 → 구조화 결과 기대값
 ```
+
+호스트별 진입점 `SKILL.md` 는 이 리포 밖에 둔다. 예: `~/repos/gh/agent-config/skills/logickocli/SKILL.md` 가 frontmatter (트리거 + 요약) 만 가지고 본문은 `references/skill-contract.md` 를 참조한다. 다른 호스트 (pi-shell-acp / Codex / OpenCode) 도 각자 짧은 진입점만 두며 본문은 한 곳에서 SSOT 로 유지된다.
 
 Phase 2에서 추가될 예정:
 

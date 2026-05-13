@@ -34,7 +34,7 @@
 ## 예시
 
 > 아래 두 예시는 Phase 2에서 CLI가 들어왔을 때의 입출력 모습을 미리 보여주는
-> mock 이다. Phase 1 현재는 같은 분석을 SKILL.md 로딩된 에이전트가 수행한다.
+> mock 이다. Phase 1 현재는 같은 분석을 `references/skill-contract.md` 가 로딩된 에이전트가 수행한다.
 
 ### 정규화
 
@@ -128,7 +128,6 @@
 ## 파일 구조
 
 ```
-SKILL.md                   # 에이전트 스킬 진입점 (모드 계약)
 AGENTS.md                  # 담당자(분신) 호출용
 README.md                  # 이 파일
 NEXT.md                    # 다음 작업 닻
@@ -136,15 +135,18 @@ NEXT.md                    # 다음 작업 닻
 vocab/
   core.yaml                # 표준 논리 어휘
   fallacies.yaml           # 오류 카탈로그
+  SCHEMA.md                # 필드 명세 + alias 충돌 정책
   raw.json                 # 원자료 audit
 
 references/
+  skill-contract.md        # 에이전트 모드 계약 본문 (호스트 SKILL.md가 참조)
   inference-rules.md       # 자연연역 + 술어 + 치환규칙
   modal-systems.md         # K/T/S4/S5/GL cheat sheet
   argument-frame.md        # 분석 출력 frame 명세
 
 scripts/
   extract_org_table.py     # 원자료 재추출
+  check_vocab.py           # vocab 자가 검증
 
 tests/
   normalization.yaml       # 입력 → ID 매핑 케이스
@@ -185,8 +187,11 @@ python3 scripts/extract_org_table.py
 
 ### 에이전트 스킬 (Claude Code / pi-shell-acp / Codex)
 
-`SKILL.md` 를 에이전트 스킬 디렉터리로 마운트하거나 참조시키면 모드 계약이
-로딩되어 한국어 자연어 추론 대화가 구조화된다.
+호스트 환경의 스킬 디렉터리에 짧은 `SKILL.md` 를 두고 본문을 이 리포의
+`references/skill-contract.md` 로 참조시키면 모드 계약이 로딩되어 한국어
+자연어 추론 대화가 구조화된다. logickocli 리포 자체에는 호스트별 SKILL.md
+를 두지 않는다 — 모드 계약 본문(`references/skill-contract.md`) 과 데이터만
+SSOT 로 유지한다.
 
 ## License
 
