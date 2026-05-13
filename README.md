@@ -33,6 +33,9 @@
 
 ## 예시
 
+> 아래 두 예시는 Phase 2에서 CLI가 들어왔을 때의 입출력 모습을 미리 보여주는
+> mock 이다. Phase 1 현재는 같은 분석을 SKILL.md 로딩된 에이전트가 수행한다.
+
 ### 정규화
 
 ```
@@ -74,10 +77,11 @@
 | 통사/의미 | 27 | 문장/명제/항진/항위, 진리표, 진리값 |
 | 정언논리 | 5 | A/E/I/O 명제 |
 | 어휘 | 6 | 단어/명사/정의/의미 |
+| 인식론 | 2 | 의견·신념, 사상 |
 | 형식 오류 | 3 | 후건긍정, 전건부정, 매개념 부주연 |
 | 비형식 오류 | 21 | 성급한 일반화, 결론 선취, 거짓 양도논법 등 |
 
-**총 147개 unique ID**.
+**총 147개 unique ID**. 수치는 `python3 scripts/check_vocab.py` 로 검증된다.
 
 ## 데이터 출처와 정책
 
@@ -163,11 +167,20 @@ for e in core['entries']:
 "
 ```
 
+### 자가 검증
+
+```bash
+python3 scripts/check_vocab.py
+# 항목 수, 도메인 분포, alias 충돌(의도된 것/정리할 것) 보고
+# 미해결 충돌·스키마 누락·dangling test ID 있으면 exit 1
+```
+
 ### 원자료 재추출
 
 ```bash
 python3 scripts/extract_org_table.py
 # → vocab/raw.json 생성
+# 원본은 ~/sync/org/notes/20230617T120300--... 또는 ~/org/notes/... 둘 다 탐색.
 ```
 
 ### 에이전트 스킬 (Claude Code / pi-shell-acp / Codex)

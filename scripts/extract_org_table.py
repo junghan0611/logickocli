@@ -13,7 +13,17 @@ import re
 import sys
 from pathlib import Path
 
-SOURCE = Path.home() / "sync/org/notes/20230617T120300--용어-말꼴-배움낱말-테이블__dictionary_glossary_logic_orgtable.org"
+SOURCE_CANDIDATES = [
+    Path.home() / "sync/org/notes/20230617T120300--용어-말꼴-배움낱말-테이블__dictionary_glossary_logic_orgtable.org",
+    Path.home() / "org/notes/20230617T120300--용어-말꼴-배움낱말-테이블__dictionary_glossary_logic_orgtable.org",
+]
+
+
+def find_source() -> Path | None:
+    for p in SOURCE_CANDIDATES:
+        if p.exists():
+            return p
+    return None
 
 TYPO_FIXES = {
     "weak inferes": "weak inference",
@@ -68,11 +78,14 @@ def split_alternates(s: str) -> list[str]:
 
 
 def main() -> int:
-    if not SOURCE.exists():
-        print(f"source not found: {SOURCE}", file=sys.stderr)
+    source = find_source()
+    if source is None:
+        print("source not found. Tried:", file=sys.stderr)
+        for p in SOURCE_CANDIDATES:
+            print(f"  {p}", file=sys.stderr)
         return 1
 
-    text = SOURCE.read_text(encoding="utf-8")
+    text = source.read_text(encoding="utf-8")
     raw_rows = parse_table(text)
 
     entries = []
@@ -99,12 +112,11 @@ def main() -> int:
 
     output = {
         "source_id": "20230617T120300",
-        "source_path": str(SOURCE),
+        "source_path": str(source),
         "row_count": len(entries),
         "duplicate_groups": [{"key": list(k), "rows": v} for k, v in duplicates.items()],
         "entries": entries,
     }
-    out_path = SOURCE.parent.parent  # ignored
     out_path = Path(__file__).resolve().parent.parent / "vocab" / "raw.json"
     out_path.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"wrote {out_path} ({len(entries)} entries, {len(duplicates)} duplicate keys)")

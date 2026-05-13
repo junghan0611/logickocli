@@ -761,9 +761,9 @@ entries:
     canonical_ko:
       - 단어
       - 용어
-      - 명사
     en: [term]
     native_aliases: ["낱말"]
+    note: "'명사' 는 LEX.NOUN 으로 따로 잡혀 있다."
 
   - id: LEX.NOUN
     domain: lexicon
@@ -859,7 +859,8 @@ entries:
     kind: concept
     canonical_ko: 결론 표시어
     en: [conclusion indicator]
-    native_aliases: ["따름말", "보람말"]
+    native_aliases: ["따름말 보람말"]
+    note: "'따름말' 단독은 META.CONCLUSION 으로 매핑된다. 표시어는 합성형으로만 잡는다."
 
   - id: META.INFERENCE_INDICATOR
     domain: metalogic
